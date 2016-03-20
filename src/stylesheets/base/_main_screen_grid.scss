@@ -1,0 +1,99 @@
+.main_screen_grid, #main_blocks  {
+  // background-color: rgba(0,0,0,.2);
+  @include clearfix;
+  position: relative;
+
+  @include media($desktop) {
+    .grid-sizer {
+      width: 390px;
+    }
+
+    .grid-sizer, .square {
+      width: 390px;
+    }
+
+    .square {
+      // padding-bottom: 390px;
+      height: 390px;
+    }
+
+    .banner, 
+    .catalogue {
+      width: 390px;
+      height: 390px;
+    }
+
+    .middle_banner,
+    .big_banner {
+      width: 590px;
+      height: 590px;
+    }
+  }
+
+  .square {
+    background-color: rgba(0,0,0,.6);
+    margin: 0;
+    // overflow: hidden;
+
+    img {
+      display: block;
+      position: relative;
+      width: 100%;
+    }
+
+    .inner_box {
+      position: relative;
+      // top: 0;
+      // right: 0;
+      // bottom: 0;
+      // left: 0;
+      // margin: auto;
+    }
+  }
+
+  @include media($mobile) {
+    max-width: 595px;
+    width: 100%;
+
+    .grid-sizer,
+    .square,
+    .banner {
+      width: 100%;
+
+      img {
+        width: 100% !important;
+      }
+    }
+  }
+
+  @include media($desktop1600) {
+    max-width: 1490px;
+
+    .grid-sizer, .square {
+      width: 365px;
+    }
+
+    .square {
+      // padding-bottom: 365px;
+      height: 365px;
+    }
+
+    .banner {
+      width: 365px;
+      height: 365px;
+    }
+
+    .middle_banner {
+      width: 365px;
+      height: 365px;
+    }
+
+    .big_banner {
+      width: 740px;
+      height: 740px;
+    }
+  }
+
+
+  
+}

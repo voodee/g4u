@@ -1,0 +1,47 @@
+.tablike_header {
+	@include row();
+	position: relative;
+	margin: 0 auto;
+
+	@include media($desktop1024) {
+	  // max-width: 1200px;
+	}
+
+	@include media($desktop1280) {
+	  max-width: 1240px;
+	}
+
+	@include media($desktop1600) {
+	  max-width: 1500px;
+	}
+
+	.h2 {
+		width: 190px;
+		font-size: em(15pt);
+		// text-transform: uppercase;
+		font-weight: normal;
+		text-align: center;
+		margin: 0 auto;
+		height: em(35pt);
+		line-height: em(36pt, 15pt);
+		border: 1px solid black;
+		background-color: white;
+	}
+
+	&:before {
+		display: block;
+		content: " ";
+		position: absolute;
+		top: 50%;
+		left: 0;
+		right: 0;
+		height: 1px;
+		background-color: black;
+		z-index: -1;
+
+		@include media($desktop1024) {
+		  left: -20px;
+		  right: -20px;
+		}
+	}
+}

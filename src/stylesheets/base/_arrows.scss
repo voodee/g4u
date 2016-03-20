@@ -1,0 +1,62 @@
+.prev, .prev-tab, .larr-b,
+.next, .next-tab, .rarr-b {
+	display: block;
+	background-image: url('../images/icons/icons.png');
+	background-repeat: no-repeat;
+	background-size: 285px 325px;
+	width: 8px;
+	height: 13px;
+	cursor: pointer;
+	position: relative;
+	opacity: 0.8;
+
+	&:hover {
+		opacity: 1;
+	}
+}
+
+.prev, .prev-tab, .larr-b {
+	background-position: -80px -43px;
+}
+
+.next, .next-tab, .rarr-b {
+	background-position: -120px -43px
+}
+
+
+
+.prev, .prev-tab,
+.next, .next-tab {
+	position: absolute;
+	top: 50%;
+	margin-top: -8px;
+	z-index: 2;
+}
+	
+.prev {
+	left: 0px;
+}
+.next {
+	right: 0px;
+}
+
+.prev-tab {
+	left: 10px;
+
+	@include media($desktop1024) {
+		left: -10px;
+	}
+	@include media($desktop1280) {
+			left: -30px;
+	}
+}
+.next-tab {
+	right: 10px;
+
+	@include media($desktop1024) {
+		right: -10px;
+	}
+	@include media($desktop1280) {
+			right: -30px;
+	}
+}

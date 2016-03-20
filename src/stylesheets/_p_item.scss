@@ -1,0 +1,268 @@
+.section.item_info {
+	position: relative;
+	width: 100%;
+
+	@include media($desktop1024) {
+	  width: 100%;
+	}
+
+	@include media($desktop1280) {
+	  width: 1240px;
+	}
+
+	@include media($desktop1600) {
+	  max-width: 1240px;
+	}
+
+	
+
+	.share {
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 35px;
+		margin: 0;
+
+		&:after {
+			display: block;
+			content: "+";
+			width: 35px;
+			height: 35px;
+			text-align: center;
+			line-height: 40px;
+			border: 1px solid #999999;
+			color: #999999;
+			font-size: 35px;
+			cursor: pointer;
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: -35px;
+		}
+
+		&:hover {
+			color: #000000;
+			border-color: black;
+
+			&:after {
+				display: none;
+			}
+
+			> li {
+				display: block !important;
+			}
+		}
+
+		li:nth-child(4) {
+			
+
+			~ li {
+				display: none;
+			}
+		}
+	}
+}
+
+.thumbnails_list {
+	display: block;
+	margin: 0;
+	padding: 0;
+
+	li {
+		display: block;
+		margin: 0;
+		padding: 0;
+		width: 90px;
+		height: 90px;
+
+		&+li {
+			margin-top: rem(10px);
+		}
+	}
+}
+
+
+.about_this_item {
+	
+}
+
+.additional_info {
+	@include row;
+
+	.tabs {
+		margin-bottom: rem(40px);
+	}
+
+	.tabs_content {
+		.about_item_content,
+		.recently_viewed_content,
+		.comments_for_item {
+			.container {
+				width: 1000px;
+			}
+		}
+	}
+
+	.about__similar {
+		@include span-columns(4 of 10);
+		@include shift(1);
+
+		article {
+			h1,
+			.h1 {
+				margin-top: 0;
+			}
+		}
+
+		.products_small_gallery {
+			.catalogue_items {
+				margin: 0 -8px;
+				text-align: left;
+			}
+
+			.item {
+				display: inline-block;
+			}
+		}
+	}
+
+	&.in_steps {
+		.about__similar {
+			@include span-columns(8 of 10);
+			@include row;
+
+			article {
+				@include span-columns(4 of 8);
+				padding-right: 20px;
+			}
+
+			.products_small_gallery {
+				@include span-columns(4 of 8);
+				@include omega;
+
+				p {
+					margin-bottom: 15px;
+				}
+			}
+		}
+
+		.tabs_content {
+			max-width: 1000px;
+			margin: 0 auto;
+		}
+	}
+
+	aside.banners {
+		@include span-columns(4 of 10);
+		@include shift(1);
+		@include omega;
+
+		.banner {
+			display: block;
+
+			&+.banner {
+				margin-top: 10px;
+			}
+		}
+	}
+
+
+	.recently_viewed {
+		.catalogue_items {
+			text-align: left;
+			.item {
+				display: inline-block;
+			}
+		}	
+	}
+}
+
+
+.tip {
+	display: inline-block;
+	vertical-align: bottom;
+	color: #000;
+	text-align: center;
+	width: 16px;
+	height: 16px;
+	background-image: url("../images/icons/icons.png");
+	background-position: -260px -36px;
+	background-size: 285px 325px;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	font-weight: normal;
+	font-style: normal;
+	position: relative;
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+
+	&.i {
+		background-position: -260px 0px; 
+	}
+
+	&:hover {
+		.tip_info {
+			display: block;
+		}
+	}
+
+	.tip_info {
+		display: none;
+		width: 320px;
+		border: 1px solid #000;
+		background-color: #fff;
+		padding: 10px;
+		@include clearfix;
+		text-align: left;
+		position: absolute;
+		top:32px;
+		left: -151px;
+		z-index: 1;
+
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: -12px;
+			left: 156px;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0 11px 12px 11px;
+			border-color: transparent transparent #000000 transparent;
+			z-index: -1;
+		}
+
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: -10px;
+			left: 157px;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 0 10px 10px 10px;
+			border-color: transparent transparent #ffffff transparent;
+			z-index: 1;
+		}
+
+		img {
+			display: block;
+			width: 60px;
+			margin-right: 15px;
+			float: left;
+		}
+
+		p {
+			display: block;
+			color: #323232;
+			font-family: "Proxima Nova";
+			font-size: 11px;
+			line-height: 14px;
+			font-weight: 300;
+		}
+
+	}
+}

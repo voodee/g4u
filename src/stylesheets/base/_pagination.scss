@@ -1,0 +1,61 @@
+.pagination {
+	display: block;
+	text-align: center;
+
+	.pages_list {
+		display: block;
+			display: inline-block;
+		text-align: center;
+		margin: 40px auto;
+		padding: 0;
+		position: relative;
+
+		li {
+			display: inline-block;
+			font-size: rem(13px);
+			position: relative;
+
+			a {
+				display: block;
+				padding: 8px 0;
+				&:after {
+	        display: block;
+	        content: " ";
+	        position: absolute;
+	        bottom: 0px;
+	        width: rem(20px);
+	        left: 50%;
+	        margin-left: rem(-10px);
+	        height: 0;
+	        background-color: #844641;
+	        @include transition(all 0.1s linear);
+	      }
+
+	      &:hover,
+	      &.active {
+	        &:after {
+	          height: 3px;
+	        }
+	      }
+			}
+
+			&+li {
+				margin-left: rem(20px);
+			}
+		}
+	}
+
+	.prev, .prev-tab,
+	.next, .next-tab {
+		position: absolute;
+		top: 50%;
+		margin-top: -8px;
+	}
+		
+	.prev, .prev-tab {
+		left: -30px;
+	}
+	.next, .next-tab {
+		right: -30px;
+	}
+}

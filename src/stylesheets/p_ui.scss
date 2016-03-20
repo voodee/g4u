@@ -1,0 +1,40 @@
+.ui .section {
+	padding: rem(50px) 0;
+	border: 1px dashed #999;
+
+	&.main_screen_grid {
+		padding: 0 !important;
+	}
+
+	&+.clear {
+		margin-top: rem(100px);
+	}
+
+	&.clear {
+		background-color: transparent;
+		padding-bottom: 0;
+		border:0;
+
+		.h1 {
+			border-bottom: 2px solid black;
+			padding-bottom: rem(25px);
+		}
+	}
+
+	article.anglecia,
+	article.proxima {
+		@include span-columns(5 of 10);
+		.h3.red {
+			margin-bottom: rem(40px);
+			margin-top: 0;
+		}
+
+		.h1, .h2, .h3, .a26, .a22, .a18, .p22, .p18 {
+			margin-top: rem(50px)
+		}
+	}
+}
+
+.red {
+	color: $red;
+}

@@ -1,0 +1,1675 @@
+extends layouts/application
+
+append config
+  - var PageTitle = ''
+  - var PageClass = 'index'
+  - var PagePath = '/'
+
+block content
+  // MIAN SCREEN
+  section#main_blocks.section.main_screen_grid
+    .container.grid
+      .grid-sizer
+      .square.grid-item.big_banner
+        img(src='images/banners/big_banner.jpg', alt='')
+      .square.grid-item.catalogue
+        .inner_box
+          h2 Каталог украшений
+          ul.categories_list
+            li
+              a(href='#', title='Кольца на каждый день')
+                | Кольца на каждый день 
+                ins.icon.rrarr
+            li
+              a(href='#', title='Помолвочные кольца')
+                | Помолвочные кольца 
+                ins.icon.rrarr
+            li
+              a(href='#', title='Обручальные кольца')
+                | Обручальные кольца 
+                ins.icon.rrarr
+            li
+              a(href='#', title='Серьги')
+                | Серьги 
+                ins.icon.rrarr
+            li
+              a(href='#', title='Кулоны, подвески и цепочки')
+                | Кулоны, подвески и цепочки 
+                ins.icon.rrarr
+            li
+              a(href='#', title='Браслеты')
+                | Браслеты 
+                ins.icon.rrarr
+            li
+              a(href='#', title='Мужская коллекция')
+                | Мужская коллекция 
+                ins.icon.rrarr
+            li
+              a(href='#', title='Мужская коллекция')
+                | Коллекции 
+                ins.icon.rrarr
+      .square.grid-item.middle_banner
+        img(src='images/banners/diamond_ring.jpg', alt='')
+      .square.grid-item.banner
+        img(src='images/banners/relationship_gift.jpg', alt='')
+      .square.grid-item.banner
+        img(src='images/banners/diamond_constructor.jpg', alt='')
+  // CATALOGUE
+  section#tabs.section.catalogue.mainpage_catalogue
+    nav.tabs
+      ul
+        li
+          a(href='#tab1')
+            | Хиты
+        li
+          a(href='#tab2')
+            | Новинки
+        li
+          a(href='#tab3')
+            | Скидки
+        li
+          a(href='#tab4')
+            | Каталог
+    .container
+      #tab1.products_small_gallery
+        .catalogue_items
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/1.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/index2.html', title='')
+                img(src='images/catalogue/small/2.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look(data-look='2')
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/8.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/9.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/10.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/11.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/3.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/4.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview.card
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/5.jpg', alt='')
+                .price.discount
+                  | 5 902 ₽ 
+                  ins %
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/6.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/7.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/12.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/1.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/2.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/3.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+      #tab2.products_small_gallery
+        .catalogue_items
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/1.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/2.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/8.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/9.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/10.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/11.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/3.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/4.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview.card
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/5.jpg', alt='')
+                .price.discount
+                  | 5 902 ₽ 
+                  ins %
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/6.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/7.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/12.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/1.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/2.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/3.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+      #tab3.products_small_gallery
+        .catalogue_items
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/1.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/2.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/8.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/9.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/10.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/11.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/3.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/4.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview.card
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/5.jpg', alt='')
+                .price.discount
+                  | 5 902 ₽ 
+                  ins %
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/6.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/7.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/12.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/1.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/2.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/3.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+      #tab4.products_small_gallery
+        .catalogue_items
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/1.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/2.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/8.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/9.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/10.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/11.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/3.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/4.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview.card
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/5.jpg', alt='')
+                .price.discount
+                  | 5 902 ₽ 
+                  ins %
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/6.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/7.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/12.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/1.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/2.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+          .item.grid-item
+            .gellery_preview
+              a(href='/catalogue/item/', title='')
+                img(src='images/catalogue/small/3.jpg', alt='')
+                .price
+                  | 5 902 ₽
+              .item_info
+                h3
+                  | Кулон Афродита
+                p.help_text
+                  | Из красного золота 585 пробы
+                  | основная вставка: Бриллиант
+                big.price
+                  | 175 902 ₽
+                .actions
+                  span.button-s.defer_to_compare
+                    ins.icon.star
+                    |                   Отложить к
+                    |                   сравнению
+                  span.button-s.quick_look
+                    ins.icon.quicklook
+                    |                   Быстрый просмотр
+  // NEWS
+  section#info.section
+    nav.tabs
+      ul
+        li
+          a(href='#encyclopedia')
+            | Энциклопедия
+        li
+          a(href='#news')
+            | Новости
+    .container
+      #encyclopedia.blog_posts
+        .info_card
+          a(href='/blog/post/', title='')
+            img(src='images/encyclopedia/1.jpg', alt='')
+            .caption
+              h3
+                | Как выбрать
+                | помолвочное
+                | кольцо?
+              small
+                | Ювелирный совет
+        .info_card
+          a(href='/blog/post/', title='')
+            img(src='images/encyclopedia/2.jpg', alt='')
+            .caption
+              h3
+                | Досье:
+                | его величество
+                | изумруд
+              small
+                | Драгоценные камни
+        .info_card
+          a(href='/blog/post/', title='')
+            img(src='images/encyclopedia/3.jpg', alt='')
+            .caption
+              h3
+                | Что подарить
+                | зрелой
+                | женщине?
+              small
+                | Идеи для подарков
+        .info_card
+          a(href='/blog/post/', title='')
+            img(src='images/encyclopedia/4.jpg', alt='')
+            .caption
+              h3
+                | Аквамарин,
+                | камень
+                | морской воды
+              small
+                | Драгоценные камни
+        .info_card
+          a(href='/blog/post/', title='')
+            img(src='images/encyclopedia/5.jpg', alt='')
+            .caption
+              h3
+                | Что дарить
+                | в зависимости
+                | от стадии
+                | отношений?
+              small
+                | Идеи для подарков
+        .info_card
+          a(href='/blog/post/', title='')
+            img(src='images/encyclopedia/6.jpg', alt='')
+            .caption
+              h3
+                | Гранат
+                | драгоценный
+                | камень
+              small
+                | Драгоценные камни
+      #news.blog_posts
+        .info_card
+          a(href='/blog/post/', title='')
+            img(src='images/encyclopedia/4.jpg', alt='')
+            .caption
+              h3
+                | Аквамарин,
+                | камень
+                | морской воды
+              small
+                | Драгоценные камни
+        .info_card
+          a(href='/blog/post/', title='')
+            img(src='images/encyclopedia/2.jpg', alt='')
+            .caption
+              h3
+                | Досье:
+                | его величество
+                | изумруд
+              small
+                | Драгоценные камни
+        .info_card
+          a(href='/blog/post/', title='')
+            img(src='images/encyclopedia/5.jpg', alt='')
+            .caption
+              h3
+                | Что дарить
+                | в зависимости
+                | от стадии
+                | отношений?
+              small
+                | Идеи для подарков
+      .container.goto
+        a.link(href='/blog/', title='Ювелирная Энциклопедия') Перейти в Ювелирную Энциклопедию
+  // ABOUT
+  section.section.about_info
+    .tablike_header
+      .h2 О GOLD4U
+    .container
+      h1
+        | Интернет-магазин ювелирных изделий «GOLD4U»
+      h2
+        | Наша любовь к прекрасному и страсть к ювелирным украшениям безграничны, для того, чтобы и Вы могли наслаждаться роскошью, мы открыли ювелирный интернет-магазин GOLD4U.ru
+      .container
+        article.hyphenate
+          p
+            | GOLD4U.ru работает с 14 февраля 2005 года и с тех пор десятки тысяч наших украшений обрели своих счастливых владельцев.
+          p
+            | Мы умеем быстро и безопасно доставлять Ваш заказ в любую точку России и предлагаем Вам удобные способы оплаты товара как наличными при получении, так и с помощью банковской карты. Для Вашего удобства Ваш заказ может быть доставлен в один из 114 пунктов самовывоза по всей России.
+          p
+            | Не смотря на то, что мы сразу предлагаем Вам очень привлекательные цены, наши постоянные покупатели имеют возможность наслаждаться дополнительными скидками и получать персональные ценовые предложения.
+          p
+            | Для ряда наших покупателей предусмотрен ряд бесплатных сервисов, например, чистка и полировка украшений, изменение размеров колец, закрепка камней.
+          p
+            | Мы знаем, что Вы любите нас за тщательно подобранные коллекции ювелирных изделий от российских производителей, известных ювелирных домов, знаменитых мировых брендов
+          p
+            | «Украшения должны выглядеть намного дороже, чем они стоят!» — это наш девиз и то, что всегда отличает ювелирный интернет магазин GOLD4U.ru от других.
+          p
+            | Наша настоящая страсть — это бриллианты!
+            | Мы выбираем их для Вас особенно тщательно, так же, как мы выбирали бы для себя. Мы признаём только сертифицированные бриллианты и отдаём предпочтение самой авторитетной в мире лаборатории по оценке и сертификации драгоценных камней — GIA.
+          p
+            | Исходя и Ваших пожеланий и суммы, которую Вы готовы инвестировать в бриллиант, мы сможем предложить Вам выбор из более, чем 90 000 «живых» бриллиантов весом от 0.15 карата до 21 карата.
+          p
+            | Ценителям мы предлагаем натуральные жёлтые бриллианты и бриллианты любых цветов от розового до чёрного. Любители драгоценные камни выберут сертифицированные GUBELIN или GIA изумруды, сапфиры или рубины. Разумеется Ваш драгоценный камень не останется без великолепной оправы от GOLD4U.ru
+          p
+            | Уже более 10-ти лет мы помогаем Вам выражать свои чувства и дарить эмоции! И мы гордимся тем, что помолвочные кольца от GOLD4U.ru гарантируют Вам ответ — «Да!»
+          p
+            | Мы с удовольствием даём Вам возможность создать своё кольцо для помолвки, и кроме великолепного Якутского бриллианта, мы добавляем к нему частичку нашей любви и заботы.
+          p
+            | Вы всегда возвращаетесь к нам за красивыми парными обручальными кольцами из платины или за подарками на рождение ребёнка, на Новый год или 8 марта, для своих любимых или коллег.
+            | Вместе с нашими дизайнерами Вы создаёте Ваши уникальные украшения, с удовольствием носите их и передаёте их из поколения в поколение.
+          p
+            | Самое ценное, что есть у нас — это Ваше доверие, его не просто заслужить и очень легко потерять. Мы всегда стараемся и будем продолжать быть для Вас максимально открытыми, внимательно слушать Ваши пожелания и замечания, совершенствовать сервисы и предлагать Вам самые лучшие украшения.
+          p
+            | Спасибо Вам за то, что выбираете нас!
+            | Команда GOLD4U.ru
+          p
+            | GOLD4U.ru — обладатель награды «Лучший ювелирный магазин — 2014» в номинации «интернет-магазины»
+      //
+        <div class="container goto">
+        <span class="pseudo toggle_text">
+        Читать далее
+        </span>
+        </div>
+  .popup.popup__quicklook.popup__quicklook--type1
+    ins.close ×
+    ins.prev
+    ins.next
+    .item_info
+      .gallery
+        .thumbnails
+          ul.thumbnails_list
+            li.thumbnail
+              img(src='images/items/item/small/2.jpg', data-big='images/items/item/big/2.jpg', alt='')
+            li.thumbnail
+              img(src='images/items/item/small/3.jpg', data-big='images/items/item/big/1.jpg', alt='')
+            li.thumbnail
+              img(src='images/items/item/small/1.jpg', data-big='images/items/item/big/2.jpg', alt='')
+        .big_view
+          img(src='images/items/item/big/2.jpg', alt='')
+      .item_details
+        div(calss='item_param')
+          h2
+            | Кольцо
+            span.slaquo  
+            br
+            span.hlaquo «
+            | Love Forever»
+        .item_param
+          p.value
+            | Из красного золота 585 пробы
+            | основная вставка: Бриллиант
+        .item_param
+          p.label
+            | Размер кольца
+          .custom_select
+            select(name='', id='')
+              option(value='') 18
+          a.how_to(href='#')
+            | Как определить
+            br
+            |           размер кольца
+        .item_param
+          p.label
+            span.availability
+              | В наличии
+          .prices
+            span.old_price 8 500 ₽
+            span.price 7 200 ₽
+        .actions
+          a.button.add_to_cart(href='#')
+            | В Корзину
+          span.button-s.defer_to_compare
+            ins.icon.star
+            |           Отложить к
+            |           сравнению
+          span.button-s.add_to_wishlist
+            ins.icon.heart
+            |           Добавить в Список Желаний
+  .popup.popup__quicklook.popup__quicklook--type2
+    ins.close ×
+    ins.prev
+    ins.next
+    .item_info
+      .gallery
+        .thumbnails
+          ul.thumbnails_list
+            li.thumbnail
+              img(src='images/items/item/small/1.jpg', data-big='images/items/item/big/1.jpg', alt='')
+            li.thumbnail
+              img(src='images/items/item/small/2.jpg', data-big='images/items/item/big/2.jpg', alt='')
+            li.thumbnail
+              img(src='images/items/item/small/1.jpg', data-big='images/items/item/big/1.jpg', alt='')
+            li.thumbnail
+              img(src='images/items/item/small/2.jpg', data-big='images/items/item/big/2.jpg', alt='')
+        .big_view
+          img(src='images/items/item/big/1.jpg', alt='')
+      .item_details
+        div(calss='item_param')
+          h2
+            | Кольцо помолвочное
+            span.slaquo  
+            span.hlaquo «
+            | Каприз принцессы»
+        .item_param
+          p.value
+            | Доступно в белом, розовом золоте и платине. Бриллиант от 0,4 карат.
+        .item_param
+          p.label
+            span.availability
+              | В наличии
+          .prices
+            span.price от 7 200 ₽
+            i.tip
+              span.tip_info
+                p
+                  | Цена зависит от брилианта
+        .item_param.item_param--size
+          p.label
+            | Размер кольца
+          .custom_select
+            select(name='', id='')
+              option(value='') 18
+          a.how_to(href='#')
+            | Как определить
+            br
+            |           размер кольца
+        .actions
+          a.button.add_to_cart(href='#')
+            | Подробнее
+          span.button-s.defer_to_compare
+            ins.icon.star
+            |           Отложить к
+            |           сравнению
+          span.button-s.add_to_wishlist
+            ins.icon.heart
+            |           Добавить в Список Желаний

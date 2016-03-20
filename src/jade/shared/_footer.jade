@@ -1,0 +1,149 @@
+
+footer#site_footer
+  nav.footer_menu
+    ul.footer_menu_links
+      li.category.footer_menu__about
+        .title О магазине
+        ul.category_links
+          li
+            a(href='/about')
+              | Контакты и доставка
+          li
+            a(href='/about/faq')
+              | Частые вопросы
+            ul
+              li
+                a(href='/about/faq/#q1') Способы оплаты
+              li
+                a(href='/about/faq/#q2') Гарантия
+              li
+                a(href='/about/faq/#q3') Возврат товара
+              li
+                a(href='#') Договор публичной оферты
+          li
+            a(href='/about/reviews') Отзывы
+
+
+      li.category.footer_menu__catalog
+        .title Каталог украшений
+        ul.category_links
+          li
+            a(href='')
+              | Помолвочные кольца
+          li
+            a(href='')
+              | Обручальные кольца
+          li
+            a(href='')
+              | Кольца на каждый день
+          li
+            a(href='')
+              | Серьги
+          li
+            a(href='')
+              | Колье, подвески, цепочки
+          li
+            a(href='')
+              | Браслеты
+          li
+            a(href='')
+              | Мужская коллекция
+          li
+            a(href='')
+              | Коллекции
+          li
+            a(href='')
+              | Конструктор колец
+
+
+      li.category.footer_menu__material
+        .title Материалы
+        ul.category_links
+          li
+            a(href='/blog')
+              | Ювелирная энциклопедия
+          li
+            a(href='/blog')
+              | Идеи для подарков
+          li
+            a(href='/blog')
+              | Новости
+
+
+      li.category.footer_menu__cabinet
+        .title Мой кабинет
+        ul.category_links
+          li
+            a(href='')
+              | Войти
+          li
+            a(href='')
+              | Зарегистрироваться
+          li
+            a(href='')
+              | Личные данные
+          li
+            a(href='')
+              | Отложенные
+          li
+            a(href='')
+              | Список желаний
+          li
+            a(href='')
+              | Корзина
+          li
+            a(href='')
+              | История покупок
+
+
+      li.category.footer_menu__social
+        .title Мы в социальных сетях
+        ul.category_links.socials
+          li
+            a.facebook(href='#', title='GOLD4U в Facebook', target='_blank')
+          li
+            a.twitter(href='#', title='GOLD4U в Twitter', target='_blank')
+          li
+            a.pinterest(href='#', title='GOLD4U в Pinterest', target='_blank')
+          li
+            a.vkontakte(href='#', title='GOLD4U в VK', target='_blank')
+          li
+            a.googleplus(href='#', title='GOLD4U в Google+', target='_blank')
+          li
+            a.instagram(href='#', title='GOLD4U в Instagram', target='_blank')
+          li
+            a.medium(href='#', title='GOLD4U в Medium', target='_blank')
+
+
+  .payment__subscription
+    .payment
+      .h6 Мы принимаем
+      ul.payment_methods_list
+        li
+          img(src='images/payments/visa@2x.png', alt='Visa')
+        li
+          img(src='images/payments/mastercard@2x.png', alt='MasterCard')
+        li
+          img(src='images/payments/americanexpress@2x.png', alt='American Express')
+        li
+          img(src='images/payments/dinersclub@2x.png', alt='Diners Club International')
+        li
+          img(src='images/payments/jcbcards@2x.png', alt='JCB Cards')
+        li
+          img(src='images/payments/rbkmoney@2x.png', alt='RBK Money')
+
+    .fast_subscription
+      .h6 Подписка на рассылку
+      form(action='')
+        label
+          input(type='email')
+          button.button_subscribe(type='submit')
+            ins.icon.mail
+            | Подписаться
+
+  .copyright_info
+    .copyright
+      | © 
+      span.year
+      |  Gold4u.ru
+    .madeby

@@ -1,0 +1,369 @@
+.p-register {}
+
+.p-login {
+	.form__header {
+		.link {
+			font-size: 13px;
+
+			&+.link {
+				margin-left: 30px;
+			}
+		}
+	}
+}
+
+.delivery_points {
+	@include shift(3);
+}
+
+.form_block {
+	@include span-columns(4 of 10);
+	@include shift(3);
+	margin-top: 15px;
+	margin-bottom: 15px;
+
+	.label__title {
+		display: block;
+		font-size: 13px;
+		color: #7B7B7B;
+		font-family: prozima, "Proxima Nova", sans-serif;
+		font-weight: 300;
+		// @include span-columns(2 of 4);
+		clear: both;
+	}
+
+	.form__header {
+		position: relative;
+		@include clearfix;
+		margin-bottom: 20px;
+
+		h2,
+		.h2 {
+			float: left;
+		}
+
+		.links {
+			float: right;
+			margin-top: 10px;
+		}
+	}
+
+	.form__fields {
+		.field {
+			display: block;
+			position: relative;
+
+			&+.field {
+				margin-top: 15px;
+			}
+		}
+
+		.input, .textarea {
+			display: block;
+			@include row;
+			float: none;
+		}
+
+		input {
+			width: 100%;
+			@include box-sizing(border-box)
+		}
+
+		textarea {
+			display: block;
+			@include row;
+			width: 100%;
+			height: 150px;
+		}
+	}
+
+	.sign__socials {
+		margin-top: 20px;
+		display: block;
+
+		@include row;
+		
+		.label__title {
+			margin-bottom: 10px;
+			display: block;
+			float: none;
+		}
+
+		.socials.connection {
+			@include row;
+		}
+	}
+}
+
+.big__button {
+	display: block;
+	width: 204px;
+	height: 67px;
+	line-height: 67px;
+	text-align: center;
+	padding: 0;
+	font-size: 21px;
+	letter-spacing: 0.025em;
+	margin: 35px auto;
+}
+
+
+
+.delivery_select {
+	margin-bottom: 20px;
+}
+
+.select_place {
+	display: block;
+	margin-top: 40px;
+
+	p {
+		font-family: proxima;
+		font-size: 11px;
+		color: #7b7b7b;
+	}
+
+	.custom_select, select {
+		display: block;
+		width: 100%;
+		margin: 5px 0;
+	}
+}
+
+
+
+
+// ORDERS HISTORY
+
+.p-orders_history {
+	margin-top: rem(80px);
+	margin-bottom: rem(100px);
+
+	h2, .h2	 {
+		text-align: center;
+	}
+}
+
+.orders_history__table {
+	min-height: 100px;
+	padding: 0;
+	margin-top: 40px;
+	position: relative;
+
+	&:before {
+		display: block;
+		content: "Нет данных";
+		position: absolute;
+		top: 40px;
+		right: 0;
+		left: 0;
+		text-align: center;
+		color: #ccc;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+
+	}
+
+	.th {
+		display: block;
+		width: 100%;
+		@include row;
+		padding: 5px 0;
+		background-color: #fff;
+
+		@extend .a22;
+		color: #a8a8a8;
+	}
+
+	.tr {
+		background-color: #fff;
+		@include row;
+		display: block;
+		position: relative;
+		width: 100%;
+
+		border-top: 1px solid #eee2e2;
+		padding: 18px 0;
+
+		@extend .a26;
+
+
+		.order__remove {
+			font-size: rem(40pt);
+			line-height: 50px;
+			height: 50px;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			width: 50px;
+			cursor: pointer;
+		}
+	}
+
+	.order__number {}
+	.order__date {}
+	.order__sum {}
+	.order__satatus {}
+	.order__remove {}
+
+
+	.order__number,
+	.order__date,
+	.order__sum,
+	.order__satatus {
+		@include span-columns(2 of 9);
+		text-align: left;
+	}
+	.order__remove {
+		@include span-columns(0.6 of 9);
+		@include omega;
+		@include shift(0.4);
+		text-align: center;
+	}
+}
+
+
+
+// CART PAGE
+
+.p-cart {
+	h1, .h1,
+	h2, .h2 {
+		small {
+			font-size: 11px;
+			margin-left: 10px;
+		}
+	}
+}
+
+
+// THANKS PAGE
+
+.p-thanks {
+	.content {
+		@include span-columns(5 of 10);
+		@include shift(2.5);
+		float: none;
+	}
+
+	.order_status {
+		text-align: center;
+		margin-top: 75px;
+		@include row;
+		position: relative;
+		padding: 1px 0;
+
+		&:after {
+			content: " ";
+			display: block;
+			position: absolute;
+			height: 1px;
+			width: 126px;
+			background-color: black;
+			left: 50%;
+			margin-left: -63px;
+			bottom: 0;
+		}
+	}
+
+	.order_status_message {
+		margin: 40px auto;
+	}
+
+	.whats_next {
+		padding: 50px 0;
+		text-align: center;
+		@include row;
+		position: relative;
+
+		.button {
+			margin:25px auto 0;
+		}
+
+		
+		&:after {
+			content: " ";
+			display: block;
+			position: absolute;
+			height: 1px;
+			width: 126px;
+			background-color: black;
+			left: 50%;
+			margin-left: -63px;
+		}
+
+		&:before {
+			display: block;
+			position: absolute;
+			top: -14px;
+			content: " ";
+			width: 27px;
+			height: 27px;
+			background-size: 27px;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-image: url("../images/icons/go_next@2x.png");
+			left: 50%;
+			margin-left: -13px;
+		}
+
+		&:after {
+			bottom: 0;
+		}
+
+	}
+
+	.after_order_links {
+		text-align: center;
+
+		ul {
+			display: block;
+			text-align: center;
+			margin: 40px auto;
+			padding: 0;
+
+			li {
+				display: inline-block;
+				padding: 0;
+				margin: 0;
+				font-size: 13px;
+
+				&+li {
+					margin-left: 30px;
+				}
+
+				a {
+					color: #985051;
+					text-decoration: underline;
+
+					&:hover {
+						color: #000;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.order_id {
+	color: #985051;
+	white-space: nowrap;
+}
+
+.section_header {
+	border-bottom: 1px solid #efe3e3;
+
+	.h1, h1,
+	.h2, h2 {
+		margin: 0 0 5px;
+	}
+}
+
+
+// 
+
+.after_order_links {
+
+}

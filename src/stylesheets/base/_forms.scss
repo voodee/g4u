@@ -1,0 +1,151 @@
+// input[type="checkbox"],
+// input[type="radio"] {
+//   display: inline;
+//   margin-right: $small-spacing / 2;
+// }
+
+
+
+#{$all-text-inputs},
+input:not([type]),
+textarea {
+  outline: 0 !important;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  border: 1px solid;
+  border-color: black;
+  padding: rem(10pt);
+  font-family: inherit;
+  font-size: rem(13pt);
+  position: relative;
+  @include appearance(none);
+  cursor: pointer;
+
+  &:focus {
+    box-shadow: 0 13px 24px 0 rgba(175,175,175,.26);
+    border-bottom: 3px solid #844641;
+    margin-bottom: -2px;
+  }
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  vertical-align: top;
+  background-color: #555555;
+  border: 0;
+  border-radius: 0;
+  height: rem(35pt);
+  font-size: rem(13pt);
+  letter-spacing: inherit;
+  font-family: inherit;
+  color: white;
+  outline: 0 !important;
+
+  &:hover {
+    background-color: #650a1b;
+  }
+
+  &:active {
+    background-color: #985051;
+  }
+}
+
+label {
+  cursor: pointer;
+
+  > * {
+    cursor: pointer;
+  }
+}
+
+
+input[type='radio'] {
+  display: none;
+
+  &+.radio {
+    display: inline-block;
+    vertical-align: bottom;
+    content: '';
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 100%;
+    @include appearance(none);
+    position: relative;
+    outline: none;
+
+    &:after {
+      display: none !important;
+    }
+
+    &:before {
+      display: none;
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 100%;
+      background-color: #985051;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+    }
+  }
+
+  &:checked+.radio {
+    &:before {
+      display: block;
+    }
+  }
+}
+
+
+
+
+input[type='checkbox'] {
+  display: none;
+
+  &+.checkbox {
+    display: inline-block;
+    vertical-align: middle;
+    content: '';
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border: 1px solid #000;
+    @include appearance(none);
+    position: relative;
+    outline: none;
+
+    &:before {
+      display: none;
+      content: "";
+      width: 8px;
+      height: 8px;
+      // border-radius: 100%;
+      background-color: #985051;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+    }
+
+    &+span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  &:checked+.checkbox:before {
+    display: block;
+  }
+}

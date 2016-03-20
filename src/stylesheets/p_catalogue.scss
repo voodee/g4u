@@ -1,0 +1,65 @@
+.p-catalogue {
+  @include media($mobile) {
+    // .stamp1 {
+    //   top: 0;
+    //   left: 0;
+    // }
+    // .stamp2 {
+    //   right: 0px;
+    //   top: 400px;
+    //   left: auto;
+    // }
+    // .stamp3 {
+    //   left: 0;
+    //   top: 800px;
+    // }
+  }
+
+	@include media($desktop1024) {
+    .stamp1 {
+  		top: 0;
+  		left: 0;
+  	}
+  	.stamp2 {
+  		right: 0px;
+  		top: 400px;
+  		left: auto;
+  	}
+  	.stamp3 {
+  		left: 0;
+  		top: 800px;
+  	}
+  }
+
+  @include media($desktop1280) {
+    .stamp1 {
+  		top: 0;
+  		left: 0;
+  	}
+  	.stamp2 {
+  		right: 0px;
+  		top: 400px;
+  		left: auto;
+  	}
+  	.stamp3 {
+  		left: 0;
+  		top: 800px;
+  	}
+  }
+
+  @include media($desktop1600) {
+  	.stamp1 {
+  		top: 0;
+  		left: 0;
+  	}
+  	.stamp2 {
+  		right: 0px;
+  		top: 200px;
+  		left: auto;
+  	}
+  	.stamp3 {
+  		left: 0;
+  		top: 600px;
+  	}
+  }
+}

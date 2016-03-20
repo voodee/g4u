@@ -1,0 +1,18 @@
+$grid-tablet-breakpoint: 768px !default;
+$grid-desktop-breakpoint: 992px !default;
+
+body {
+  &::before {
+    /* never visible - used to check MQ in jQuery */
+    display: none;
+    content: 'mobile';
+
+    @media (min-width: $grid-tablet-breakpoint) {
+      content: 'tablet';
+    }
+
+    @media (min-width: $grid-desktop-breakpoint) {
+      content: 'desktop';
+    }
+  }
+}

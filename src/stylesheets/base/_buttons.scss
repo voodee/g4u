@@ -1,0 +1,96 @@
+// #{$all-button-inputs},
+// button {
+//   @include appearance(none);
+//   -webkit-font-smoothing: antialiased;
+//   background-color: $action-color;
+//   border-radius: $base-border-radius;
+//   border: none;
+//   color: #fff;
+//   cursor: pointer;
+//   display: inline-block;
+//   font-family: $base-font-family;
+//   font-size: $base-font-size;
+//   font-weight: 600;
+//   line-height: 1;
+//   padding: 0.75em 1em;
+//   text-decoration: none;
+//   user-select: none;
+//   vertical-align: middle;
+//   white-space: nowrap;
+
+//   &:hover,
+//   &:focus {
+//     background-color: darken($action-color, 15%);
+//     color: #fff;
+//   }
+
+//   &:disabled {
+//     cursor: not-allowed;
+//     opacity: 0.5;
+//   }
+// }
+
+
+// BUTTON
+
+.button {
+  background-color: $red;
+  cursor: pointer;
+  text-decoration: none;
+  border: 0;
+  padding: 15px;
+  line-height: 1;
+  color: white;
+  font-family: inherit;
+
+  @include transition(all 0.1s linear);
+
+  &:hover {
+    background-color: $darkred;
+  }
+
+  &.big {
+    display: block;
+    width: 220px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    font-size: 21px;
+    padding: 0;
+  }
+}
+
+
+// SECONDARY BUTTON
+
+.button-s {
+  @include box-sizing(border-box);
+  position: relative;
+  background-color: white;
+  cursor: pointer;
+  font-size: em(11pt);
+  line-height: em(12pt, 11pt);
+  letter-spacing: 0;
+  border: 1px solid transparent;
+
+  @include transition(all 0.1s linear);
+
+  &:hover {
+    border: 1px solid black;
+  }
+}
+
+
+// CART
+.button-cart {
+  display: inline-block;
+  height: rem(45px);
+  line-height: rem(45px);
+  color: white;
+  padding: 0 rem(15px);
+
+  .icon {
+    margin-right: rem(5px);
+    opacity: 1 !important;
+  }
+}
