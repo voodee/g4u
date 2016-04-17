@@ -1,0 +1,76 @@
+extends layouts/application
+
+append config
+  - var PageTitle = 'Поиск'
+  - var PageClass = 'search'
+  - var PagePath = '/search.html'
+
+
+block breadcrumbs
+
+  nav.breadcrumbs
+    ul.breadcrumbs_list
+      li
+        a(href='/', title='Главная') Главная
+      li
+        a(href='/search.html', title='Поиск') Поиск
+      li
+        a(href='/search.html', title='Изделия с изумрудом') 
+          | Изделия с изумрудом
+          span.number 26 773
+
+block content
+
+  section.nrg-catalog.nrg-catalog__items.mdl-grid
+    .mdl-cell.mdl-cell--12-col
+      - var catalog_items = [1, 2, 8, 9, 3, 10, 11, 5, 6, 7, 4, 12, 2, 5, 6 , 7, 8, 9, 8, 9]
+
+      .mdl-grid.nrg-catalog__grid.grid-packery
+
+        each val in catalog_items
+
+          if val == 3
+            .mdl-cell.mdl-cell--4-col.mdl-cell--2-col-tablet.stamp.nrg-item-block__outner
+              a.nrg-item-block(href='#', title='', style='background-image: url("images/banners/diamond_constructor.jpg")')
+
+
+          .mdl-cell.mdl-cell--2-col.mdl-cell--2-col-tablet.nrg-item__outner
+            .nrg-item
+              a( href='item.html', title='' )
+                img( src='images/catalogue/small/#{val}.jpg', alt='' )
+                .nrg-item__price 5 902 ₽
+              .nrg-item-info
+                h3 Кулон Афродита
+                p.nrg-item-info__help-text Из красного золота 585 пробы основная вставка: Бриллиант
+                big.nrg-item-info__price 175 902 ₽
+                .nrg-item-info__actions
+                  span.button-s.button--defer-to-compare
+                    ins.icon.star
+                    | Отложить к сравнению
+                  span.button-s.button--quick-look( data-look=(val%2 + 1) )
+                    ins.icon.quicklook
+                    | Быстрый просмотр
+
+
+
+  section.section__about-info
+
+    .mdl-grid
+      .mdl-cell.mdl-cell--4-col.mdl-cell--2-offset-desktop.mdl-cell--4-col-tablet.nrg-news__item
+        a.mdl-grid(href='/post.html', title='')
+          .mdl-cell.mdl-cell--5-col
+            img(src='images/encyclopedia/1.jpg', alt='')
+          .mdl-cell.mdl-cell--7-col.nrg-news__text
+            .nrg-news__text-caption
+              h3 Как правильно выбрать бриллиант?
+              small Ювелирный совет
+
+      .mdl-cell.mdl-cell--4-col.mdl-cell--4-col-tablet.nrg-news__item
+        a.mdl-grid(href='/post.html', title='')
+          .mdl-cell.mdl-cell--5-col
+            img(src='images/encyclopedia/2.jpg', alt='')
+          .mdl-cell.mdl-cell--7-col.nrg-news__text
+            .nrg-news__text-caption
+              h3 Как правильно выбрать оправу?
+              small Ювелирный совет
+

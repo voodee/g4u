@@ -1,0 +1,78 @@
+extends layouts/application
+
+append config
+  - var PageTitle = 'Доставка'
+  - var PageClass = 'delivery'
+  - var PagePath = '/'
+
+block breadcrumbs
+
+  nav.breadcrumbs.light
+    ul.breadcrumbs_list
+      li
+        a(href='/', title='Главная') Главная
+      li
+        a(href='/about/', title='О магазине') О магазине
+      li
+        a(href='/about/delivery', title='Отзывы') Доставка
+
+
+block nav_tabs
+  include shared/_nav_tabs_static_page
+
+
+block content
+
+  section.mdl-grid.page-about
+    .mdl-cell.mdl-cell--8-col.mdl-cell--2-offset-desktop.mdl-cell--6-col-tablet.mdl-cell--1-offset-tablet
+
+      article.page__article
+        .nrg-typography-h3 Санкт-Петербург
+
+        ol.addresses-list
+          li
+            p
+              | Адрес: г.Санкт-Петербург, Литейный проспект, 60 
+              br
+              |             Телефон: +7 (812) 309-39-61
+              br
+              |             Телефон: 8-800-555-99-54
+              br
+              |             Часы работы: понедельник-пятница с 9:00 до 17:30, в субботу с 11:00 до 16:00
+              br
+              |             Проезд: ст.м. Пл.Восстания/Маяковская
+          li
+            p
+              | Адрес: г. Санкт-Петербург, промзона Парнас,2-й 
+              br
+              | Верхний пр., д.10
+              br
+              |             Телефон: +7 (812) 309-39-61
+              br
+              |             Телефон: 8-800-555-99-54
+              br
+              |             Часы работы: понедельник-пятница с 10:00 до 19:00
+              br
+              |             Проезд: Метро Парнас, авт. 139, м. Проспект Просвещения, маршрутка 539
+          li
+            p
+              | Адрес: г. Санкт-Петербург, ул. Шателена, д.3
+              br
+              |             Телефон: +7 (812) 309-39-61
+              br
+              |             Телефон: 8-800-555-99-54
+              br
+              |             Часы работы: понедельник-пятница с 09:00 до 17:30
+              br
+              |             Проезд: м.Пл.Мужества НИИ Телевидения
+
+
+    .mdl-cell.mdl-cell--12-col
+      .map
+        script(type='text/javascript', charset='utf-8', src='https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=QhzOH95AcPwlWddyrlUdp2_fQ1u8lCqF&width=auto&height=350')
+
+    .mdl-cell.mdl-cell--8-col.mdl-cell--2-offset-desktop.mdl-cell--6-col-tablet.mdl-cell--1-offset-tablet
+
+      article.page__article
+        p
+          a(href='/contacts/delivery/#pickup_points') Вернуться к алфавитному указателю

@@ -21,6 +21,7 @@ textarea {
   position: relative;
   @include appearance(none);
   cursor: pointer;
+  color: black;
 
   &:focus {
     box-shadow: 0 13px 24px 0 rgba(175,175,175,.26);

@@ -1,0 +1,128 @@
+.nrg
+  &-typography
+    &-h1
+      font-size: 2.03125rem
+      margin: 1.25rem auto
+
+    &-desc
+      font-size: 1.3125rem
+      line-height: 1.5em
+      margin-top: 0
+      margin-bottom: 2.1875rem
+
+    &-h2
+      font-size: 1.6875rem
+      line-height: 1.40741em
+      font-weight: normal
+
+    &-h3
+      font-weight: normal
+      font-size: 1.3125rem
+
+      .page__article &
+        line-height: 1.57143em
+
+
+    &-h6
+      font-family: proxima
+      font-size: 0.625rem
+      color: #9a9b9d
+
+
+  &-journal     
+    text-align: justify;
+
+    @include columns(1)
+    @include column-gap(60px)
+
+
+    @media (min-width: $grid-tablet-breakpoint)
+      @include columns(2)
+
+    @media (min-width: $grid-desktop-breakpoint)
+      @include column-gap(90px)
+
+
+
+.page
+  &__article
+    display: block
+
+    & + & 
+      margin-top: 3.75rem
+
+    // ul 
+    //   list-style-position: outside
+    //   padding: 0
+
+    //   li 
+    //     font-size: 13px
+    //     line-height: 19px
+
+    //     & + li
+    //       margin-top: 20px
+
+  &__list
+    list-style-position: outside
+    padding: 0
+
+    li 
+      font-size: 13px
+      line-height: 19px
+
+      & + li
+        margin-top: 20px
+
+
+
+
+.contents-list      
+  display: block
+  margin: 0
+  padding: 0
+
+  li 
+    display: block
+    margin: 0
+    padding: 0
+    font-size: 0.8125rem
+    line-height: 1.23077em
+
+    + li 
+      margin-top: 1.875rem
+
+  // &--faqs
+
+
+
+.alphabet-places-list    
+  margin-top: 50px
+
+  &__letter
+    font-size: 40px
+    display: block
+    margin-bottom: 10px
+
+  ul 
+    display: block
+    margin: 0
+    padding: 0
+
+    li 
+      display: block
+      margin: 0
+      padding: 0
+      font-size: 12px
+      line-height: 22px
+
+      a 
+        text-decoration: underline
+
+  > ul > li 
+    margin-bottom: 50px
+
+
+// .list
+//   &--payment-methods
+//         display: block;
+//     margin: 50px auto;

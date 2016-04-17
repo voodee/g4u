@@ -1,0 +1,93 @@
+// .about
+
+//   @include media($mobile)
+
+//     .container
+//       display: flex
+//       flex-direction: column
+
+//       > *
+//         order: 1
+
+//       > #contacts 
+//         order: 0
+//         margin-top: 0 !important
+
+//       .contents 
+//         margin-top: 3.75rem
+
+
+
+.page
+  &-about
+
+    &:last-child
+      margin-bottom: 2.1875em
+
+
+
+    &--padding
+      margin-top: 50px
+      margin-bottom: 50px
+
+    .addresses-list
+      font-size: 0.8125rem
+      line-height: 1.23077em
+      list-style-position: inside
+      padding: 0
+      margin: 1.5625rem 0 0
+
+      li 
+        padding: 0
+        margin: 0
+
+    .map
+      display: block
+      float: left
+      display: block
+      margin-right: 1.30254%
+      width: 100%
+      margin-top: 3.75rem
+      margin-bottom: 3.75rem   
+
+    .pay-sub__payment-list
+      margin: 50px auto
+
+    .nrg-typography-h2
+      margin-bottom: 2.1875rem  
+
+    .premap-contact
+      margin-top: 30px
+
+    .pages_list
+      margin-top: 0 !important  
+
+
+
+.addresses-list
+  margin: 50px 0
+  padding: 0
+  counter-reset: num-list
+
+  li
+    display: block
+    position: relative
+    padding: 0
+    margin: 0
+    counter-increment: num-list
+
+    & + li
+      margin-top: 40px
+
+    &:before
+      content: counter(num-list)
+      font-size: 27px
+      position: absolute
+      left: 0
+      top: 10px
+
+    p
+      display: block
+      padding: 0 0 0 40px
+      font-size: 13px
+      line-height: 19px

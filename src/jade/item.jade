@@ -1,0 +1,410 @@
+extends layouts/application
+
+append config
+  - var PageTitle = ''
+  - var PageClass = 'item'
+  - var PagePath = '/'
+
+block breadcrumbs
+  include shared/_breadcrumbs
+
+block content
+
+  section.section-page.mdl-grid
+    .mdl-cell.mdl-cell--10-col.mdl-cell--1-offset.mdl-grid.mdl-grid--no-spacing.section-page__item
+      .gallery.mdl-cell.mdl-cell--7-col.mdl-grid.mdl-grid--no-spacing
+        .thumbnails.mdl-cell.mdl-cell--2-col
+          ul.thumbnails_list
+            li.thumbnail
+              img(src='images/items/item/small/2.jpg', data-big='images/items/item/big/2.jpg', alt='')
+            li.thumbnail
+              img(src='images/items/item/small/3.jpg', data-big='images/items/item/big/1.jpg', alt='')
+            li.thumbnail
+              img(src='images/items/item/small/1.jpg', data-big='images/items/item/big/2.jpg', alt='')
+        .big_view.mdl-cell.mdl-cell--10-col
+          img(src='images/items/item/big/2.jpg', alt='')
+
+      .item_details.mdl-cell.mdl-cell--5-col.mdl-grid.mdl-grid--no-spacing
+        .mdl-cell.mdl-cell--12-col
+          .item_param
+            p.label
+              | Артикул: 
+              span kolco_kapriz
+            h2
+              | Кольцо помолвочное
+              span.slaquo  
+              span.hlaquo «
+              | Каприз принцессы»
+          .item_param
+            p.label
+              | Металл
+            .custom_select
+              select(name='', id='')
+                option(value='') Белое золото 585 пробы
+          .item_param
+            p.label
+              | Вес бриллианта в каратах
+            .custom_select
+              select(name='', id='')
+                option(value='') 1
+                option(value='') 2
+                option(value='') 3
+                option(value='') 4
+                option(value='') 5
+                option(value='') 6
+                option(value='') 7
+          .item_param
+            p.label
+              | Размер кольца
+            .custom_select
+              select(name='', id='')
+                option(value='') 18
+            a.how_to(href='#')
+              | Как определить
+              br
+              |           размер кольца
+          .item_param
+            label(for='add_engrave')
+              input#add_engrave(type='checkbox', name='engrave')
+              span.checkbox
+              span
+                | Бесплатно гравировать
+                i.tip
+                  span.tip_info
+                    img(src='images/etching.jpg', alt='')
+                    p
+                      | Гравировка доступна к заказу во всех
+                      | обручальных, помолвочных и сделанных
+                      | с помощью конструктора, колец
+          .item_param
+            p.label
+              | Цена с учётом доставки в 
+              span.your_city Санкт-Петербург
+            .prices
+              span.old_price 8 500 ₽
+              span.price 7 200 ₽
+              span.info
+                ins.icon.q
+                span.tip.i
+          .actions
+            a.button.big.add_to_cart(href='#')
+              | В Корзину
+            span.button-s.defer_to_compare
+              ins.icon.star
+              |           Отложить к
+              |           сравнению
+            span.button-s.add_to_wishlist
+              ins.icon.heart
+              |           Добавить в Список Желаний
+
+      ul.share.socials
+        li
+          a.facebook(href='#', title='GOLD4U в Facebook', target='_blank')
+        li
+          a.twitter(href='#', title='GOLD4U в Twitter', target='_blank')
+        li
+          a.pinterest(href='#', title='GOLD4U в Pinterest', target='_blank')
+        li
+          a.vkontakte(href='#', title='GOLD4U в VK', target='_blank')
+        li
+          a.googleplus(href='#', title='GOLD4U в Google+', target='_blank')
+        li
+          a.instagram(href='#', title='GOLD4U в Instagram', target='_blank')
+        li
+          a.medium(href='#', title='GOLD4U в Medium', target='_blank')
+
+
+  //- section.section.item_info
+  //-   .container
+  //-     .gallery
+  //-       .thumbnails
+  //-         ul.thumbnails_list
+  //-           li.thumbnail
+  //-             img(src='images/items/item/small/1.jpg', data-big='images/items/item/big/1.jpg', alt='')
+  //-           li.thumbnail
+  //-             img(src='images/items/item/small/3.jpg', data-big='images/items/item/big/3.jpg', alt='')
+  //-       .big_view
+  //-         img(src='images/items/item/big/1.jpg', alt='')
+  //-     .item_details
+  //-       div(calss='item_param')
+  //-         p.label
+  //-           | Артикул: 
+  //-           span kolco_kapriz
+  //-         h2
+  //-           | Кольцо помолвочное
+  //-           span.slaquo  
+  //-           span.hlaquo «
+  //-           | Каприз принцессы»
+  //-       .item_param
+  //-         p.label
+  //-           | Металл
+  //-         .custom_select
+  //-           select(name='', id='')
+  //-             option(value='') Белое золото 585 пробы
+  //-       .item_param
+  //-         p.label
+  //-           | Вес бриллианта в каратах
+  //-         .custom_select
+  //-           select(name='', id='')
+  //-             option(value='') 1
+  //-             option(value='') 2
+  //-             option(value='') 3
+  //-             option(value='') 4
+  //-             option(value='') 5
+  //-             option(value='') 6
+  //-             option(value='') 7
+  //-       .item_param
+  //-         p.label
+  //-           | Размер кольца
+  //-         .custom_select
+  //-           select(name='', id='')
+  //-             option(value='') 18
+  //-         a.how_to(href='#')
+  //-           | Как определить
+  //-           br
+  //-           |           размер кольца
+  //-       .item_param
+  //-         label(for='add_engrave')
+  //-           input#add_engrave(type='checkbox', name='engrave')
+  //-           span.checkbox
+  //-           span
+  //-             | Бесплатно гравировать
+  //-             i.tip
+  //-               span.tip_info
+  //-                 img(src='images/etching.jpg', alt='')
+  //-                 p
+  //-                   | Гравировка доступна к заказу во всех
+  //-                   | обручальных, помолвочных и сделанных
+  //-                   | с помощью конструктора, колец
+  //-       .item_param
+  //-         p.label
+  //-           | Цена с учётом доставки в 
+  //-           span.your_city Санкт-Петербург
+  //-         .prices
+  //-           span.old_price 8 500 ₽
+  //-           span.price 7 200 ₽
+  //-           span.info
+  //-             ins.icon.q
+  //-             span.tip.i
+  //-       .actions
+  //-         a.button.big.add_to_cart(href='#')
+  //-           | В Корзину
+  //-         span.button-s.defer_to_compare
+  //-           ins.icon.star
+  //-           |           Отложить к
+  //-           |           сравнению
+  //-         span.button-s.add_to_wishlist
+  //-           ins.icon.heart
+  //-           |           Добавить в Список Желаний
+  //-   ul.share.socials
+  //-     li
+  //-       a.facebook(href='#', title='GOLD4U в Facebook', target='_blank')
+  //-     li
+  //-       a.twitter(href='#', title='GOLD4U в Twitter', target='_blank')
+  //-     li
+  //-       a.pinterest(href='#', title='GOLD4U в Pinterest', target='_blank')
+  //-     li
+  //-       a.vkontakte(href='#', title='GOLD4U в VK', target='_blank')
+  //-     li
+  //-       a.googleplus(href='#', title='GOLD4U в Google+', target='_blank')
+  //-     li
+  //-       a.instagram(href='#', title='GOLD4U в Instagram', target='_blank')
+  //-     li
+  //-       a.medium(href='#', title='GOLD4U в Medium', target='_blank')
+  section.section.additional_info.about_this_item
+    // TABS
+    nav.tabs
+      ul
+        li.active
+          a(href='#tab1') Об этом изделии
+        li
+          a(href='#tab2') Вы также смотрели
+        li
+          a(href='#tab3') Комментарии
+    .tabs_content
+      #tab1.about_item_content
+
+        //- .mdl-grid
+        //-   .mdl-cell.mdl-cell--7-col
+
+        .container
+          .about__similar
+            article
+              h1
+                | Кольцо помолвочное
+                span.slaquo  
+                span.hlaquo «
+                | Каприз принцессы»
+              p
+                | Кольцо из белого золота 585 пробы с большим бриллиантом круглой огранки с 57 гранями с характеристикой 3/5 и весом 0,25 кт.
+            .products_small_gallery
+              p
+                | Похожие изделия
+              .catalogue_items
+                .item
+                  .gellery_preview
+                    a(href='/catalogue/item/', title='')
+                      img(src='images/catalogue/small/1.jpg', alt='')
+                      .price
+                        | 5 902 ₽
+                    .item_info
+                      h3
+                        | Кулон Афродита
+                      p.help_text
+                        | Из красного золота 585 пробы
+                        | основная вставка: Бриллиант
+                      big.price
+                        | 175 902 ₽
+                      .actions
+                        span.button-s.defer_to_compare
+                          ins.icon.star
+                          |                         Отложить к
+                          |                         сравнению
+                        span.button-s.quick_look
+                          ins.icon.quicklook
+                          |                         Быстрый просмотр
+                .item
+                  .gellery_preview
+                    a(href='/catalogue/item/', title='')
+                      img(src='images/catalogue/small/1.jpg', alt='')
+                      .price
+                        | 5 902 ₽
+                    .item_info
+                      h3
+                        | Кулон Афродита
+                      p.help_text
+                        | Из красного золота 585 пробы
+                        | основная вставка: Бриллиант
+                      big.price
+                        | 175 902 ₽
+                      .actions
+                        span.button-s.defer_to_compare
+                          ins.icon.star
+                          |                         Отложить к
+                          |                         сравнению
+                        span.button-s.quick_look
+                          ins.icon.quicklook
+                          |                         Быстрый просмотр
+                .item
+                  .gellery_preview
+                    a(href='/catalogue/item/', title='')
+                      img(src='images/catalogue/small/1.jpg', alt='')
+                      .price
+                        | 5 902 ₽
+                    .item_info
+                      h3
+                        | Кулон Афродита
+                      p.help_text
+                        | Из красного золота 585 пробы
+                        | основная вставка: Бриллиант
+                      big.price
+                        | 175 902 ₽
+                      .actions
+                        span.button-s.defer_to_compare
+                          ins.icon.star
+                          |                         Отложить к
+                          |                         сравнению
+                        span.button-s.quick_look
+                          ins.icon.quicklook
+                          |                         Быстрый просмотр
+          aside.banners
+            a.square.banner(href='', title='')
+              img(src='images/banners/hd1.jpg', alt='')
+            a.square.banner(href='', title='')
+              img(src='images/banners/diamond_constructor.jpg', alt='')
+      #tab2(calss='recently_viewed_content')
+        .container
+          .recently_viewed
+            .catalogue_items
+              .item
+                .gellery_preview
+                  a(href='/catalogue/item/', title='')
+                    img(src='images/catalogue/small/1.jpg', alt='')
+                    .price
+                      | 5 902 ₽
+                  .item_info
+                    h3
+                      | Кулон Афродита
+                    p.help_text
+                      | Из красного золота 585 пробы
+                      | основная вставка: Бриллиант
+                    big.price
+                      | 175 902 ₽
+                    .actions
+                      span.button-s.defer_to_compare
+                        ins.icon.star
+                        |                       Отложить к
+                        |                       сравнению
+                      span.button-s.quick_look
+                        ins.icon.quicklook
+                        |                       Быстрый просмотр
+              .item
+                .gellery_preview
+                  a(href='/catalogue/item/', title='')
+                    img(src='images/catalogue/small/1.jpg', alt='')
+                    .price
+                      | 5 902 ₽
+                  .item_info
+                    h3
+                      | Кулон Афродита
+                    p.help_text
+                      | Из красного золота 585 пробы
+                      | основная вставка: Бриллиант
+                    big.price
+                      | 175 902 ₽
+                    .actions
+                      span.button-s.defer_to_compare
+                        ins.icon.star
+                        |                       Отложить к
+                        |                       сравнению
+                      span.button-s.quick_look
+                        ins.icon.quicklook
+                        |                       Быстрый просмотр
+              .item
+                .gellery_preview
+                  a(href='/catalogue/item/', title='')
+                    img(src='images/catalogue/small/1.jpg', alt='')
+                    .price
+                      | 5 902 ₽
+                  .item_info
+                    h3
+                      | Кулон Афродита
+                    p.help_text
+                      | Из красного золота 585 пробы
+                      | основная вставка: Бриллиант
+                    big.price
+                      | 175 902 ₽
+                    .actions
+                      span.button-s.defer_to_compare
+                        ins.icon.star
+                        |                       Отложить к
+                        |                       сравнению
+                      span.button-s.quick_look
+                        ins.icon.quicklook
+                        |                       Быстрый просмотр
+              .item
+                .gellery_preview
+                  a(href='/catalogue/item/', title='')
+                    img(src='images/catalogue/small/1.jpg', alt='')
+                    .price
+                      | 5 902 ₽
+                  .item_info
+                    h3
+                      | Кулон Афродита
+                    p.help_text
+                      | Из красного золота 585 пробы
+                      | основная вставка: Бриллиант
+                    big.price
+                      | 175 902 ₽
+                    .actions
+                      span.button-s.defer_to_compare
+                        ins.icon.star
+                        |                       Отложить к
+                        |                       сравнению
+                      span.button-s.quick_look
+                        ins.icon.quicklook
+                        |                       Быстрый просмотр
+      #tab3.comments_for_item
+        .container
+          article
+            h1

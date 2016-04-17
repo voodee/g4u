@@ -1,0 +1,126 @@
+extends layouts/application
+
+append config
+  - var PageTitle = 'Доставка'
+  - var PageClass = 'delivery'
+  - var PagePath = '/'
+
+block breadcrumbs
+
+  nav.breadcrumbs.light
+    ul.breadcrumbs_list
+      li
+        a(href='/', title='Главная') Главная
+      li
+        a(href='/about.html', title='О магазине') О магазине
+      li
+        a(href='/about_reviews.html', title='Отзывы') Доставка
+
+
+block nav_tabs
+  include shared/_nav_tabs_static_page
+
+
+block content
+
+  section.mdl-grid.page-about
+    .mdl-cell.mdl-cell--7-col.mdl-cell--3-offset-desktop.mdl-cell--5-col-tablet.mdl-cell--2-offset-tablet
+
+      article.page__article
+        .nrg-typography-h1 Отзывы
+        p
+          | Мы ценим Ваше мнение, и постараемся учесть все Ваши пожелания для достижения максимального удобства при работе с нами.
+          br
+          | Оставляйте ваши вопросы или отзывы здесь или публично, используя хэштег #GOLD4U
+
+
+    .mdl-cell.mdl-cell--4-col.mdl-cell--3-offset-desktop.mdl-cell--4-col-tablet.mdl-cell--2-offset-tablet
+      form.form-review(action='')
+        .form-review--fields
+          label(for='email')
+            span.form-review--fields-title.ampersant Электронная почта
+            span.form-review--fields-input
+              input#email(type='text', value='podstrigich@gmail.com')
+          label(for='name')
+            span.form-review--fields-title.ampersant Ваше имя
+            span.form-review--fields-input
+              input#name(type='text', value='Марина Васильевна')
+          label(for='phone')
+            span.form-review--fields-title Телефон
+            span.form-review--fields-input
+              input#phone(type='text', value='')
+          label(for='msg')
+            span.form-review--fields-title.ampersant Сообщение
+            span.form-review--fields-input
+              textarea#msg(rows='10')
+          label.spam(for='spam')
+            span.form-review--fields-title.ampersant Защита от спама
+            span.form-review--fields-input
+              input#spam(type='text', value='')
+            span.form-review--fields-img
+              img(src='/images/spam.jpg')
+        button.button Оставить отзыв
+
+
+
+    .mdl-cell.mdl-cell--8-col.mdl-cell--2-offset-desktop.mdl-cell--6-col-tablet.mdl-cell--1-offset-tablet
+      .mdl-grid
+        .mdl-cell.mdl-cell--6-col
+          .nrg-typography-h2 Всего отзывов: 584
+
+        .mdl-cell.mdl-cell--6-col  
+          nav.pagination
+            ul.pages_list
+              ins.prev
+              li
+                a.active(href='#', title='Go to page 1') 1
+              li
+                a(href='#', title='Go to page 2') 2
+              li
+                a(href='#', title='Go to page 3') 3
+              li
+                a(href='#', title='Go to page 4') 4
+              li
+                | …
+              li
+                a(href='#', title='Go to page 59') 59
+              ins.next
+
+
+    .mdl-cell.mdl-cell--8-col.mdl-cell--2-offset-desktop.mdl-cell--6-col-tablet.mdl-cell--1-offset-tablet
+      .comment
+        h3.h3 Сергей, 3 / 11 / 2015, 08:45 (Отзыв №584)
+        .comment--body
+          | Кольцо пришло! Спасибо большое! Все надежно и аккуратно упаковано. Само колечко очень красивое, думаю девушка будет в восторге. За такими подарками теперь только к вам :)
+        .media
+          .media-left
+            a(href='#')
+              img.media-object(src='/images/user/avatar.jpg', alt='')
+          .media-body
+            h4.h4.media-heading GOLD4U, 03 ноября 2015, 08:45
+            |             Сергей, благодарим за отзыв! Надеемся, Вашей девушке оно тоже понравится. Ждем Вас снова
+
+      .comment
+        h3.h3 Сергей, 3 / 11 / 2015, 08:45 (Отзыв №584)
+        .comment--body
+          | К сожалению покупка не состоялась, колечко позиционируют как импортное, а на деле оказывается что "можем сделать любое". Даже слов нет, одно вранье, жаль (((
+        .media
+          .media-left
+            a(href='#')
+              img.media-object(src='/images/user/avatar.jpg', alt='')
+          .media-body
+            h4.h4.media-heading GOLD4U, 03 ноября 2015, 08:45
+            |             Карина добрый день. На нашем сайте представлен товар более 30 разных производителей, Российских и иностранных. Всё верно, в случае отсутствия товара на складе мы имеем возможность разместить индивидуальный заказ на изготовление ювелирного изделия на производстве поставщиков, как Российских так и зарубежных. При этом, ювелирное изделие может быть выполнено в любом цвете золота, пробе, а также с другими драгоценными камнями, по желанию покупателя. Поэтому операторы call-центра предлагают такую услугу.
+
+      .comment
+        h3.h3 Сергей, 3 / 11 / 2015, 08:45 (Отзыв №585)
+        .comment--body
+          | Здравствуйте! Хочу поблагодарить девочек из вашего магазина за их терпение и внимательность и за помощь!
+        .media
+          .media-left
+            a(href='#')
+              img.media-object(src='/images/user/avatar.jpg', alt='')
+          .media-body
+            h4.h4.media-heading GOLD4U, 03 ноября 2015, 08:45
+            |             Были рады помочь!
+

@@ -1,0 +1,83 @@
+extends layouts/application
+
+append config
+  - var PageTitle = 'Личные данные'
+  - var PageClass = 'personal_info'
+  - var PagePath = '/personal_info.html'
+
+
+block breadcrumbs
+
+  nav.breadcrumbs.breadcrumbs--light
+    ul.breadcrumbs_list.breadcrumbs_list--light
+      li
+        a(href='/', title='Главная') Главная
+      li
+        a(href='/personal_info.html', title='Поиск') Личные данные
+
+block nav_tabs
+  include shared/_nav_tabs_cabinet_page
+
+  
+block content
+  section.section.p-personal-info
+    .container
+      form(action='')
+        .form_block
+          .form__header
+            .h2
+              | Основная информация
+          .form__fields
+            label.field(for='')
+              span.label__title Электронная почта
+              span.input
+                input(type='text')
+            label.field(for='')
+              span.label__title Фамилия
+              span.input
+                input(type='text')
+            label.field(for='')
+              span.label__title Имя и Отчество
+              span.input
+                input(type='text')
+            label.field(for='')
+              span.label__title Контактный телефон
+              span.input
+                input(type='text')
+          .sign__socials
+            .label__title
+              | Привязка к социальным сетям
+            ul.socials.connection
+              li
+                a.facebook.active(href='#', title='Войти в магазин GOLD4U при помощи Facebook', target='_blank')
+              li
+                a.twitter(href='#', title='Войти в магазин GOLD4U при помощи Twitter', target='_blank')
+              li
+                a.googleplus(href='#', title='Войти в магазин GOLD4U при помощи Google+', target='_blank')
+              li
+                a.vkontakte(href='#', title='GOLD4U в VK', target='_blank')
+        .form_block
+          .form__header
+            .h2
+              | Адрес доставки №1
+            .links
+              a.button.button--small(href='#')
+                | + Добавить адрес
+          .form__fields
+            label.field(for='')
+              span.label__title Город
+              span.input
+                input(type='text')
+            label.field(for='')
+              span.label__title Адрес доставки
+              span.textarea
+                textarea(name='', id='')
+            label.field(for='')
+              span.label__title Почтовая рассылка
+              span.input
+                input(type='checkbox')
+                span.checkbox
+                span.label
+                  | Я хочу получать письма от GOLD4U
+                  | (не чаще раза в неделю)
+          button.button.big__button Сохранить

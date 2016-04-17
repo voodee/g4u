@@ -1,0 +1,190 @@
+#sticky
+  nav.breadcrumbs.with_filter
+    ul.breadcrumbs_list
+      li
+        a(href='/', title='Главная') Главная
+      li
+        a(href='/catalogue', title='Каталог') Каталог
+      li
+        a(title='Все изделия') Все изделия
+        span.number 26 773
+    ul.catalogue_filter
+      li.has_options_filter
+        span.title.filter_title Тип
+      li.has_options_filter
+        span.title.filter_title Цена
+        .options_filter
+          .filter_content
+            #diamondPrice.slider-range
+            p.a26 Цена украшения
+      li.has_options_filter
+        span.title.filter_title Вставка
+        .options_filter
+          .filter_content
+            fieldset
+              label(for='stone_opt1')
+                input#stone_opt1(type='checkbox')
+                span.checkbox
+                |               Без камня
+            fieldset
+              h6 Драгоценные камни
+              label(for='stone_opt1')
+                input#stone_opt1(type='checkbox')
+                span.checkbox
+                |               Бриллиант
+              label(for='stone_opt2')
+                input#stone_opt2(type='checkbox')
+                span.checkbox
+                |               Изумруд
+              label(for='stone_opt3')
+                input#stone_opt3(type='checkbox')
+                span.checkbox
+                |               Рубин
+              label(for='stone_opt4')
+                input#stone_opt4(type='checkbox')
+                span.checkbox
+                |               Сапфир
+              label(for='stone_opt5')
+                input#stone_opt5(type='checkbox')
+                span.checkbox
+                |               Жемчуг
+              label(for='stone_opt6')
+                input#stone_opt6(type='checkbox')
+                span.checkbox
+                |               Александрит
+            fieldset
+              h6 Полудрагоценные камни
+              label(for='stone_opt7')
+                input#stone_opt7(type='checkbox')
+                span.checkbox
+                |               Гранат
+              label(for='stone_opt8')
+                input#stone_opt8(type='checkbox')
+                span.checkbox
+                |               Хризолит
+              label(for='stone_opt9')
+                input#stone_opt9(type='checkbox')
+                span.checkbox
+                |               Топаз
+              label(for='stone_opt10')
+                input#stone_opt10(type='checkbox')
+                span.checkbox
+                |               Аметист
+              label(for='stone_opt11')
+                input#stone_opt11(type='checkbox')
+                span.checkbox
+                |               Сапфир
+              label(for='stone_opt12')
+                input#stone_opt12(type='checkbox')
+                span.checkbox
+                |               Цитрин
+              label(for='stone_opt13')
+                input#stone_opt13(type='checkbox')
+                span.checkbox
+                |               Аквамарин
+              label(for='stone_opt14')
+                input#stone_opt14(type='checkbox')
+                span.checkbox
+                |               Турмалин
+              label(for='stone_opt15')
+                input#stone_opt15(type='checkbox')
+                span.checkbox
+                |               Бирюза
+            fieldset
+              label(for='stone_opt16')
+                input#stone_opt16(type='checkbox')
+                span.checkbox
+                |               Все камни
+      li.has_options_filter
+        span.title.filter_title Металл
+        .options_filter
+          .filter_content
+            fieldset
+              label(for='metall_opt1')
+                input#metall_opt1(type='checkbox')
+                span.checkbox
+                |               Любой металл
+            fieldset
+              h6 Золото
+              label(for='metall_opt1')
+                input#metall_opt1(type='checkbox')
+                span.checkbox
+                |               Белое золото 585 пробы
+              label(for='metall_opt2')
+                input#metall_opt2(type='checkbox')
+                span.checkbox
+                |               Желтое золото 585 пробы
+              label(for='metall_opt3')
+                input#metall_opt3(type='checkbox')
+                span.checkbox
+                |               Красное золото 585 пробы
+              label(for='metall_opt4')
+                input#metall_opt4(type='checkbox')
+                span.checkbox
+                |               Белое золото 750 пробы
+              label(for='metall_opt5')
+                input#metall_opt5(type='checkbox')
+                span.checkbox
+                |               Желтое золото 750 пробы
+            fieldset
+              label(for='metall_opt7')
+                input#metall_opt7(type='checkbox')
+                span.checkbox
+                |               Платина 950 пробы
+              label(for='metall_opt8')
+                input#metall_opt8(type='checkbox')
+                span.checkbox
+                |               Палладий 850 пробы
+              label(for='metall_opt9')
+                input#metall_opt9(type='checkbox')
+                span.checkbox
+                |               Серебро 925 пробы
+      li.has_options_filter
+        span.title.filter_title Коллекция
+      li.has_options_filter
+        span.title.filter_title Сортировка
+        .options_filter
+          .filter_content
+            p.a26 Сортировка
+            ul.sort_options
+              li
+                label(for='sort_opt1')
+                  input#sort_opt1(type='radio', name='sort')
+                  span.radio
+                  span Сначала дорогие
+              li
+                label(for='sort_opt2')
+                  input#sort_opt2(type='radio', name='sort')
+                  span.radio
+                  span Сначала дешёвые
+              li
+                label(for='sort_opt3')
+                  input#sort_opt3(type='radio', name='sort')
+                  span.radio
+                  span Сначала новые
+              li
+                label(for='sort_opt4')
+                  input#sort_opt4(type='radio', name='sort')
+                  span.radio
+                  span Сначала популярные
+    ul.favline
+      li
+        a.favline--link.b-tip(href='/cabinet/wishlist', title='')
+          i.favline-icon.favline-icon--heart
+          |  (3)
+          span.b-tip--info
+            | Ваш WishList
+      li
+        a.favline--link.b-tip(href='/cabinet/favourites', title='')
+          i.favline-icon.favline-icon--star
+          |  (2)
+          span.b-tip--info
+            | Отложены
+            br
+            | к сравнению
+      li
+        a.favline--link.b-tip(href='/cabinet/cart', title='')
+          i.favline-icon.favline-icon--cart
+          |  (2)
+          span.b-tip--info
+            | Ваша корзина

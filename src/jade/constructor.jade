@@ -1,0 +1,99 @@
+extends layouts/application
+
+append config
+  - var PageTitle = 'Конструктор колец'
+  - var PageClass = 'constructor'
+  - var PagePath = '/constructor.html'
+
+
+block breadcrumbs
+
+  nav.breadcrumbs.breadcrumbs--light
+    ul.breadcrumbs_list.breadcrumbs_list--light
+      li
+        a(href='/', title='Главная') Главная
+      li
+        a(href='/constructor.html', title='Поиск') Конструктор колец
+
+block nav_tabs
+  include shared/_nav_tabs_constructor_page
+  
+
+block content
+  section.section.constructor_start__banner
+    .container
+      .h1
+        | Конструктор Колец
+      .constructor_formula
+        .part.first
+          .figure
+            img(src='/images/constructor/1.png', alt='')
+          .caption
+            p.p26
+              | Уникальная
+              | оправа
+        .part.second
+          .figure
+            img(src='/images/constructor/2.png', alt='')
+          .caption
+            p.p26
+              | Cертифицированный
+              | бриллиант
+        .part.result
+          .figure
+            img(src='/images/constructor/3.png', alt='')
+          .caption
+            p.26
+              | Ваше кольцо
+              | готово
+      a.button.button--big-w(href='/constructor_step1.html')
+        | Создать кольцо
+      p.a26
+        ins.icon.i
+        |       Ваше кольцо будет готово в течении 2–7 дней в зависимости от конфигурации
+
+
+  section.section__about-info
+
+    .mdl-grid
+      .mdl-cell.mdl-cell--4-col.mdl-cell--2-offset-desktop.mdl-cell--4-col-tablet.nrg-news__item
+        a.mdl-grid(href='/post.html', title='')
+          .mdl-cell.mdl-cell--5-col
+            img(src='images/encyclopedia/1.jpg', alt='')
+          .mdl-cell.mdl-cell--7-col.nrg-news__text
+            .nrg-news__text-caption
+              h3 Как правильно выбрать бриллиант?
+              small Ювелирный совет
+
+      .mdl-cell.mdl-cell--4-col.mdl-cell--4-col-tablet.nrg-news__item
+        a.mdl-grid(href='/post.html', title='')
+          .mdl-cell.mdl-cell--5-col
+            img(src='images/encyclopedia/2.jpg', alt='')
+          .mdl-cell.mdl-cell--7-col.nrg-news__text
+            .nrg-news__text-caption
+              h3 Как правильно выбрать оправу?
+              small Ювелирный совет
+
+
+
+
+  section.section__about-info
+    .mdl-grid
+      .mdl-cell.mdl-cell--8-col.mdl-cell--2-offset-desktop.mdl-typography--text-center
+        h1.nrg-typography-h1 Секреты оправы
+
+    .mdl-grid
+      .mdl-cell.mdl-cell--8-col.mdl-cell--2-offset-desktop.nrg-journal
+        p
+          | «Что может быть проще обычного кольца?» — спросите Вы и будете правы. Простота и элегантность, стиль и изящество — это именно то, за что Вы любите наши кольца.
+          | Мы с гордостью можем утверждать, что наши кольца стоят в одном ряду по качеству и дизайну с известными мировыми брендами.
+        p
+          | В чем же разница? Сразу оговоримся, в отличие от бриллианта, все наши оправы изготовлены за границей на швейцарском оборудовании последнего поколения.
+          | Все оправы без исключения прошли проверку в Государственной инспекции пробирного надзора и получили государственное клеймо подтверждающее пробу золота.
+          | Украшение с бриллиантом — дорогостоящая вещь класса люкс. И для того, чтобы Вы выбрали именно наше кольцо, мы приложили немало усилий.
+        p
+          | Сплав золота не только гарантирует содержание 58,5% или 75% золота (в зависимости от пробы), но и обладает оптимальным контрастным цветом.
+          | Кроме этого, компоненты сплава подобраны так, чтобы прочно удерживать бриллиант и быть минимально подверженными внешним воздействиям.
+        p
+          | В процессе изготовления мастера высшей квалификации четко следят за пропорциями кольца, каждое из которых несет в себе единственную цель — стать идеальной оправой для Вашего бриллианта! Профессиональные закрепщики бережно, прочно и идеально ровно крепят бриллиант в кольцо, чтобы подчеркнуть игру бриллианта.
+          | Сочетание технологии и персонального отношения создают Ваши кольца!

@@ -1,0 +1,122 @@
+extends layouts/application
+
+append config
+  - var PageTitle = 'Аквамарин'
+  - var PageClass = 'post'
+  - var PagePath = '/post.html'
+
+
+block breadcrumbs
+
+  nav.breadcrumbs.breadcrumbs--light
+    ul.breadcrumbs_list
+      li
+        a(href='/', title='Главная') Главная
+      li
+        a(href='/blog.html', title='Ювелирная энциклопедия') Ювелирная энциклопедия
+      li
+        a(href='/post.html', title='Аквамарин') Аквамарин
+
+block content
+  section.section.b-post
+    .container
+      article.post
+        header.post__header
+          h1.post__title Аквамарин
+          .post__reading
+            | Читать 
+            ins.icon.time
+            |  3 минуты
+          h2.post__subtitle
+            | Аквамарин — камень рождённых в Марте и традиционный камень для украшений в подарок на 19 годовщину свадьбы. Считается, что Аквамарин приносит счастье в семью.
+        .post__banners
+          .banner
+            img(src='/images/blog/b1.jpg', alt='')
+          .banner
+            img(src='/images/blog/b2.jpg', alt='')
+        .post__text
+          h2
+            | Аквамарин (aquamarine)
+          p
+            | Назван в честь морской воды (”Aqua Marina” – лат.), обладает насыщенным голубым цветом, несёт в себе чистоту и прохладу.
+          p
+            | Аквамарин – камень рождённых в Марте и традиционный камень для украшений в подарок на 19 годовщину свадьбы. Считается, что Аквамарин приносит счастье в семью.
+            | Древние греки считали, что Аквамарин это гарантия безопасности для моряков уходящих в море, и что он успокаивает морские волны.
+          p
+            | Аквамарин – это разновидность берилла (как, например, и изумруд). Идеальные аквамарины сочетают в себе прозрачность и насыщенный синий (или с сине-зелёным оттенком) цвет.
+          p
+            | Как и большинство бериллов Аквамарины встречаются в природе в виде больших кристаллов, что способствует огранке камней большого размера.
+          figure
+            img(src='/images/blog/im1.jpg', alt='')
+            figcaption
+              | Фото: Daniel Trinchillo, Fine Minerals International
+          h2
+            | На что обратить внимание при покупке
+          p
+            | 1.  Цвет: лучший выбор это темно-синий или с небольшим зеленоватым оттенком.
+          figure
+            img(src='/images/blog/im2.jpg', alt='')
+            figcaption
+              | Фото: Stone World, Sao Paulo Brazil
+          p
+            | 2. Чистота: большинство Аквамаринов хорошего качества полностью прозрачны.
+            | Большинство ограненных Аквамаринов в ювелирных изделиях не содержат больших, видимых глазом включений, однако модный тренд – использовать Аквамарины с хорошим цветом, но с видимымы включениями в качестве уникальных центральных камней.
+          figure
+            img(src='/images/blog/im3.jpg', alt='')
+            figcaption
+              | Тиара с бриллиантами и аквамаринами, Cartier. Фото: Sothbey’s
+          p
+            | 3. Огранка – важный фактор, влияющий на игру Аквамарина.
+            | Часто Аквамарин гранят в фантазийные формы, чтобы максимально раскрыть цвет и подчеркнуть чистоту камня.
+          figure
+            img(src='/images/blog/im4.jpg', alt='')
+          p
+            | 4. Цена: если Вы ищете натуральный Аквамарин то, в зависимости от цвета и чистоты, цена может варьироваться от 90 USD/за карат до 1500 USD/за карат и выше в зависимости от размера камня.
+        footer.post__footer
+          p
+            | Анна Васильева для GOLD4U.RU  
+            time(pubdate='') 12/07/2015
+      .post__share
+        p.p22
+          | Поделиться в социальных сетях:
+        ul.share.socials
+          li
+            a.facebook(href='#', title='GOLD4U в Facebook', target='_blank')
+          li
+            a.twitter(href='#', title='GOLD4U в Twitter', target='_blank')
+          li
+            a.pinterest(href='#', title='GOLD4U в Pinterest', target='_blank')
+          li
+            a.vkontakte(href='#', title='GOLD4U в VK', target='_blank')
+          li
+            a.googleplus(href='#', title='GOLD4U в Google+', target='_blank')
+          li
+            a.instagram(href='#', title='GOLD4U в Instagram', target='_blank')
+          li
+            a.medium(href='#', title='GOLD4U в Medium', target='_blank')
+
+
+  section.section__about-info
+    .mdl-grid
+      .mdl-cell.mdl-cell--12-col.nrg-tablike-header
+        .h2.nrg-tablike-header__title.nrg-tablike-header__title--light Похожие материалы
+
+    .mdl-grid
+      .mdl-cell.mdl-cell--4-col.mdl-cell--2-offset-desktop.mdl-cell--4-col-tablet.nrg-news__item
+        a.mdl-grid(href='/post.html', title='')
+          .mdl-cell.mdl-cell--5-col
+            img(src='images/encyclopedia/1.jpg', alt='')
+          .mdl-cell.mdl-cell--7-col.nrg-news__text
+            .nrg-news__text-caption
+              h3 Как правильно выбрать бриллиант?
+              small Ювелирный совет
+
+      .mdl-cell.mdl-cell--4-col.mdl-cell--4-col-tablet.nrg-news__item
+        a.mdl-grid(href='/post.html', title='')
+          .mdl-cell.mdl-cell--5-col
+            img(src='images/encyclopedia/2.jpg', alt='')
+          .mdl-cell.mdl-cell--7-col.nrg-news__text
+            .nrg-news__text-caption
+              h3 Как правильно выбрать оправу?
+              small Ювелирный совет
+

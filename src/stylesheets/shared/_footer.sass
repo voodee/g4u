@@ -1,0 +1,216 @@
+.footer-links
+  color: #555
+  margin-bottom: 2.1875rem
+
+  @media (max-width: $grid-desktop-breakpoint - 1)
+    text-align: center
+
+  &__title
+    border-bottom: 1px solid #000
+    border-top: 1px solid #000
+    font-size: 0.6875rem
+    line-height: 3.18182rem
+
+    @media (max-width: $grid-desktop-breakpoint - 1)
+      display: none
+
+      &--social
+        display: block
+        border-width: 0
+
+  &__list,
+  &__social
+    margin: 1.25rem 0 0
+    padding: 0
+    font-family: "Proxima Nova", Helvetica, Arial, sans-serif
+
+    li 
+      display: block
+      margin: 0
+      padding: 0
+
+  &__list
+    li 
+      font-size: 0.75rem
+      line-height: 2.08333em
+
+      a 
+        color: #555
+
+      ul 
+        margin: 0
+        padding: 0
+
+        @media (max-width: $grid-desktop-breakpoint - 1)
+          display: none
+
+        li
+          position: relative
+          margin-left: em(12pt)
+          padding: 0
+
+          &:before 
+            display: block
+            content: "•"
+            position: absolute
+            left: em(-10pt)
+
+
+  &__social
+    width: 60%
+
+    li 
+      float: left
+      position: relative
+
+      a
+        display: block
+        width: rem(35px)
+        height: rem(35px)
+
+        background-image: url('../images/socials_footer@2x.jpg')
+        background-size: 140px 105px
+
+        background-repeat: no-repeat
+        cursor: pointer
+        border: 0
+        text-decoration: none
+
+        &.facebook
+          background-position: 0 0
+
+        &.twitter 
+          background-position: -35px 0
+
+        &.pinterest
+          background-position: -70px 0
+
+        &.vkontakte
+          background-position: -105px 0
+
+        &.googleplus
+          background-position: 0 -35px
+
+        &.instagram
+          background-position: -35px -35px
+
+        &.medium
+          background-position: -70px -35px
+
+    @media (max-width: $grid-desktop-breakpoint - 1)
+      max-width: 140px
+      margin: 0 auto
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+
+
+.pay-sub
+  .nrg-typography-h6
+    margin-bottom: .625rem
+    font-size: .75rem
+
+  &__payment
+    &-list
+      display: block
+      margin: 0 0 rem(20pt)
+      padding: 0
+
+      li 
+        display: inline-block
+        margin: 0 rem(20pt) rem(10pt) 0
+        padding: 0
+        vertical-align: middle
+
+        img 
+          display: inline-block
+          max-height: rem(35pt)
+          max-width: rem(80pt)
+
+  &__subscription
+    label
+      width: 100%
+      zoom: 1
+      display: block
+
+    input
+      display: block
+      width: 60%
+      float: left
+      vertical-align: top
+      height: rem(35pt)
+      line-height: rem(35pt)
+      margin: 0
+
+    button
+      position: relative
+      left: -1px
+      float: left
+      width: 40%
+      display: block
+
+
+
+
+.copyright
+  border-top: 1px solid #000
+  padding: em(5px) 0 0
+
+  &__info
+    font-family: proxima
+    font-size: em(9px)
+    text-transform: uppercase
+    float: left
+
+
+
+
+
+
+
+
+
+.socials
+  display: block
+  padding: 0
+
+  li 
+    display: block
+    position: relative
+    margin: 0
+    padding: 0
+    float: left
+
+    a
+      display: block
+      width: rem(35px)
+      height: rem(35px)
+
+      background-image: url('../images/socials_footer@2x.jpg')
+      background-size: 140px 105px
+
+      background-repeat: no-repeat
+      cursor: pointer
+      border: 0
+      text-decoration: none
+
+      &.facebook
+        background-position: 0 0
+
+      &.twitter 
+        background-position: -35px 0
+
+      &.pinterest
+        background-position: -70px 0
+
+      &.vkontakte
+        background-position: -105px 0
+
+      &.googleplus
+        background-position: 0 -35px
+
+      &.instagram
+        background-position: -35px -35px
+
+      &.medium
+        background-position: -70px -35px    

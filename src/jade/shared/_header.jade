@@ -1,2 +1,319 @@
-header.mdl-layout__header.mdl-color--grey-100.mdl-color-text--grey-800
-  .mdl-layout__header-row Header
+header.header#site_header
+  h1.logo
+    a(href='/', title='Интернет-магазин ювелирных изделий «GOLD4U»')
+      | Gold4u.ru
+  .fast_contacs
+
+    .free_call
+      big.phone
+        | 8-800-555-99-54
+      small
+        | Звонок бесплатный
+
+    .fast_delivery_info
+      .delivery_options
+        | Доставка в 
+        span.pseudo Санкт-Петербург
+      small
+        | ближайшая доставка 
+        span.next_delivery_date 04.06.2015
+
+
+
+
+  .shop_navigation
+    ul
+      li
+        a.shop_navigation__wishlist(href='/cabinet/wishlist', title='Список желаний | GOLD4U')
+          ins.icon.heart
+          span.shop_navigation__text Wishlist
+          |  
+          span.num 0
+      li
+        a.shop_navigation__favourites(href='/cabinet/favourites', title='Отложенные товары | GOLD4U')
+          ins.icon.star
+          span.shop_navigation__text Отложенные
+          |  
+          span.num 42
+      li
+        a.shop_navigation__cart.button.button-cart(href='/cabinet/cart', title='Ваша корзина | GOLD4U')
+          ins.icon.cart.w
+          span.shop_navigation__text Корзина
+          |  
+          span.num 0
+
+
+
+  nav.main_menu
+    button.navbar-toggle
+      span.icon-bar  
+      span.icon-bar  
+      span.icon-bar  
+
+
+    ul.main_menu-list
+      li.search.has_submenu
+        a(href='#', title='Поиск')
+          ins.icon.search
+          |  
+          span Поиск
+        .submenu
+          .search_block
+            form(action='/search/')
+              label(for='search')
+                input#search(type='search', placeholder='Поиск')
+                button.button.search__button(type='submit') Искать
+
+      li.has_submenu
+        a(href='catalogue.html', title='Каталог украшений')
+          | Каталог украшений
+        .submenu
+          ul
+            li
+              a(href='catalogue.html', title='Все изделия')
+                | Все 
+                br
+                |                 изделия
+            li
+              a(href='#', title='Коллекции')
+                | Коллекции
+            li
+              a(href='#', title='Кольца на каждый день')
+                | Кольца на  
+                br
+                |                 каждый день
+            li
+              a(href='#', title='Кольца помолвочные')
+                | Кольца 
+                br
+                |                 помолвочные
+            li
+              a(href='#', title='Кольца обручальные')
+                | Кольца 
+                br
+                |                 обручальные
+            li
+              a(href='#', title='Серьги')
+                | Серьги
+            li
+              a(href='#', title='Подвески, кулоны, цепочки')
+                | Подвески, 
+                br
+                |                 кулоны, 
+                br
+                |                 цепочки
+            li
+              a(href='#', title='Браслеты')
+                | Браслеты
+            li
+              a(href='#', title='Мужская коллекция')
+                | Мужская 
+                br
+                |                 коллекция
+      li
+        a(href='#', title='Обручальные и помолвочные кольца')
+          | Обручальные и
+          br
+          |           помолвочные кольца
+      li
+        a(href='/constructor/', title='Конструктор колец')
+          | Конструктор колец
+      li
+        a(href='/blog/', title='Ювелирная энциклопедия')
+          | Ювелирная
+          br
+          |           энциклопедия
+      li
+        a(href='#', title='Идеи для подарков')
+          | Идеи для подарков
+      li.login.has_submenu
+        a(href='/cabinet/log-in', title='Войти')
+          span Войти
+          span.login__text-my-cabinet.hide Мой кабинет
+          |  
+          ins.icon.key
+        .submenu
+          ul.login_options
+            li
+              a.signin.link(href='/cabinet/log-in', title='Войти') Войти
+            li
+              a.register.link(href='/cabinet/register', title='Зарегистрироваться') Зарегистрироваться
+            li
+              ul.socials.connection
+                li
+                  a.facebook(href='#', title='Войти в магазин GOLD4U при помощи Facebook', target='_blank')
+                li
+                  a.twitter(href='#', title='Войти в магазин GOLD4U при помощи Twitter', target='_blank')
+                li
+                  a.googleplus(href='#', title='Войти в магазин GOLD4U при помощи Google+', target='_blank')
+                li
+                  a.vkontakte(href='#', title='GOLD4U в VK', target='_blank')
+
+  
+  .header-phone-icon
+    a.header-phone-icon__link( href='#', title='' )
+      i.icon.phone2x
+
+
+
+
+
+
+
+//- header.mdl-grid.header
+//-   .mdl-cell.mdl-cell--12-col.header-cell
+
+//-     h1.header__logo
+//-       a(href='/', title='Интернет-магазин ювелирных изделий «GOLD4U»')
+//-         | Gold4u.ru
+//-     .fast_contacs
+
+//-       .free_call
+//-         big.phone
+//-           | 8-800-555-99-54
+//-         small
+//-           | Звонок бесплатный
+
+//-       .fast_delivery_info
+//-         .delivery_options
+//-           | Доставка в 
+//-           span.pseudo Санкт-Петербург
+//-         small
+//-           | ближайшая доставка 
+//-           span.next_delivery_date 04.06.2015
+
+
+
+
+//-       .shop_navigation
+//-         ul
+//-           li
+//-             a.shop_navigation__wishlist(href='/cabinet/wishlist', title='Список желаний | GOLD4U')
+//-               ins.icon.heart
+//-               span.shop_navigation__text Wishlist
+//-               |  
+//-               span.num 0
+//-           li
+//-             a.shop_navigation__favourites(href='/cabinet/favourites', title='Отложенные товары | GOLD4U')
+//-               ins.icon.star
+//-               span.shop_navigation__text Отложенные
+//-               |  
+//-               span.num 42
+//-           li
+//-             a.shop_navigation__cart.button.button-cart(href='/cabinet/cart', title='Ваша корзина | GOLD4U')
+//-               ins.icon.cart.w
+//-               span.shop_navigation__text Корзина
+//-               |  
+//-               span.num 0
+
+
+
+//-       nav.main_menu
+//-         button.navbar-toggle
+//-           span.icon-bar  
+//-           span.icon-bar  
+//-           span.icon-bar  
+
+
+//-         ul.main_menu-list
+//-           li.search.has_submenu
+//-             a(href='#', title='Поиск')
+//-               ins.icon.search
+//-               |  
+//-               span Поиск
+//-             .submenu
+//-               .search_block
+//-                 form(action='/search/')
+//-                   label(for='search')
+//-                     input#search(type='search', placeholder='Поиск')
+//-                     button.button.search__button(type='submit') Искать
+
+//-           li.has_submenu
+//-             a(href='catalogue.html', title='Каталог украшений')
+//-               | Каталог украшений
+//-             .submenu
+//-               ul
+//-                 li
+//-                   a(href='catalogue.html', title='Все изделия')
+//-                     | Все 
+//-                     br
+//-                     |                 изделия
+//-                 li
+//-                   a(href='#', title='Коллекции')
+//-                     | Коллекции
+//-                 li
+//-                   a(href='#', title='Кольца на каждый день')
+//-                     | Кольца на  
+//-                     br
+//-                     |                 каждый день
+//-                 li
+//-                   a(href='#', title='Кольца помолвочные')
+//-                     | Кольца 
+//-                     br
+//-                     |                 помолвочные
+//-                 li
+//-                   a(href='#', title='Кольца обручальные')
+//-                     | Кольца 
+//-                     br
+//-                     |                 обручальные
+//-                 li
+//-                   a(href='#', title='Серьги')
+//-                     | Серьги
+//-                 li
+//-                   a(href='#', title='Подвески, кулоны, цепочки')
+//-                     | Подвески, 
+//-                     br
+//-                     |                 кулоны, 
+//-                     br
+//-                     |                 цепочки
+//-                 li
+//-                   a(href='#', title='Браслеты')
+//-                     | Браслеты
+//-                 li
+//-                   a(href='#', title='Мужская коллекция')
+//-                     | Мужская 
+//-                     br
+//-                     |                 коллекция
+//-           li
+//-             a(href='#', title='Обручальные и помолвочные кольца')
+//-               | Обручальные и
+//-               br
+//-               |           помолвочные кольца
+//-           li
+//-             a(href='/constructor/', title='Конструктор колец')
+//-               | Конструктор колец
+//-           li
+//-             a(href='/blog/', title='Ювелирная энциклопедия')
+//-               | Ювелирная
+//-               br
+//-               |           энциклопедия
+//-           li
+//-             a(href='#', title='Идеи для подарков')
+//-               | Идеи для подарков
+//-           li.login.has_submenu
+//-             a(href='/cabinet/log-in', title='Войти')
+//-               span Войти
+//-               span.login__text-my-cabinet.hide Мой кабинет
+//-               |  
+//-               ins.icon.key
+//-             .submenu
+//-               ul.login_options
+//-                 li
+//-                   a.signin.link(href='/cabinet/log-in', title='Войти') Войти
+//-                 li
+//-                   a.register.link(href='/cabinet/register', title='Зарегистрироваться') Зарегистрироваться
+//-                 li
+//-                   ul.socials.connection
+//-                     li
+//-                       a.facebook(href='#', title='Войти в магазин GOLD4U при помощи Facebook', target='_blank')
+//-                     li
+//-                       a.twitter(href='#', title='Войти в магазин GOLD4U при помощи Twitter', target='_blank')
+//-                     li
+//-                       a.googleplus(href='#', title='Войти в магазин GOLD4U при помощи Google+', target='_blank')
+//-                     li
+//-                       a.vkontakte(href='#', title='GOLD4U в VK', target='_blank')
+
+
+//-       .header-phone-icon
+//-         a.header-phone-icon__link( href='#', title='' )
+//-           i.icon.phone2x

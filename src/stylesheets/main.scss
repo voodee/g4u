@@ -1,6 +1,115 @@
 @charset "utf-8";
 
+/* Material Design Lite */
+
+// Variables and mixins
+@import 'lib/material-design-lite/variables';
+@import 'lib/material-design-lite/mixins';
+
+// Resets and dependencies
+@import 'lib/material-design-lite/resets/resets';
+@import 'lib/material-design-lite/typography/typography';
+
+// // Components
+// @import "palette/palette";
+// @import "ripple/ripple";
+// @import "animation/animation";
+// @import "badge/badge";
+// @import "button/button";
+// @import "card/card";
+// @import "checkbox/checkbox";
+// @import "data-table/data-table";
+// @import "dialog/dialog";
+// @import "footer/mega_footer";
+// @import "footer/mini_footer";
+// @import "icon-toggle/icon-toggle";
+// @import "list/list";
+// @import "menu/menu";
+// @import "progress/progress";
+// @import "layout/layout";
+// @import "radio/radio";
+// @import "slider/slider";
+// @import "snackbar/snackbar";
+// @import "spinner/spinner";
+// @import "switch/switch";
+// @import "tabs/tabs";
+// @import "textfield/textfield";
+// @import "tooltip/tooltip";
+// @import "shadow/shadow";
+@import 'lib/material-design-lite/grid/grid';
+
+
+
 @import "bourbon/_bourbon";
+@import "neat/_neat";
+
+@import "base/forms";
+
+@import 'shared/variables';
+
+@import 'shared/grid';
+@import 'shared/catalog';
+@import 'shared/button';
+
+@import 'shared/tabs';
+@import 'shared/tablike';
+@import 'shared/news';
+@import 'shared/typography';
+@import 'shared/footer';
+@import 'shared/popup';
+// @import 'shared/header';
+@import 'shared/favline';
+@import 'shared/breadcrumbs';
+@import 'shared/search';
+@import 'shared/pagination';
+
+@import 'pages/index';
+@import 'pages/404';
+@import 'pages/item';
+@import 'pages/about';
+@import 'pages/review';
+
+
+
+
+
+body {
+  @include image-rendering(optimizeSpeed);
+  padding-top: 56px;
+
+  // @media (min-width: $grid-tablet-breakpoint) {
+  //   padding-top: 120px;
+  // }
+
+  @media (min-width: $grid-desktop-breakpoint) { 
+    padding: 0 10px;
+  }
+
+  // &.table {
+  //   margin: 0 auto;
+  // }
+
+  // &.phone {
+  //   margin: 0 auto;
+  // }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import "neat/_neat";
+
+
 
 
 // GRID SETTINGS
@@ -11,7 +120,6 @@ $gutter-percent : calc-percent($gutter, $max-width);
 // $visual-grid: true;
 $grid-columns: 10 !default;
 
-@import "neat/_neat";
 // @import "base/base";
 
 $phone: new-breakpoint(max-width 768px 4);
@@ -47,34 +155,34 @@ $desktop1600: new-breakpoint(min-width 1520px 15);
 
 
 
-body {
-  @include image-rendering(optimizeSpeed);
-  min-width: 1020px;
-  padding: 0 10px;
+// body {
+//   @include image-rendering(optimizeSpeed);
+//   // min-width: 1020px;
+//   padding: 0 10px;
 
-  @include media($mobile) {
-    width: 100%;
-    min-width: 300px;
-    // max-width: 500px;
-    padding-top: 120px;
-  }
+//   @include media($mobile) {
+//     width: 100%;
+//     // min-width: 300px;
+//     // max-width: 500px;
+//     padding-top: 120px;
+//   }
 
-  @include media($phone) {
-    padding-top: 56px;
-  }
+//   @include media($phone) {
+//     padding-top: 56px;
+//   }
 
-  &.table {
-    max-height: 1280px;
-    max-width: 800px;
-    margin: 0 auto;
-  }
+//   &.table {
+//     // max-height: 1280px;
+//     // max-width: 800px;
+//     margin: 0 auto;
+//   }
 
-  &.phone {
-    max-height: 627px;
-    max-width: 375px;
-    margin: 0 auto;
-  }
-}
+//   &.phone {
+//     // max-height: 627px;
+//     // max-width: 375px;
+//     margin: 0 auto;
+//   }
+// }
 
 
 
@@ -93,8 +201,7 @@ body {
  
 @import "p_main";
 
-@import "p_about";
-@import "pages/about";
+// @import "p_about";
 
 @import "p_catalogue";
 
@@ -117,7 +224,7 @@ body {
 @import "p_ui";
 
 
-@import "footer";
+// @import "footer";
 
 
 

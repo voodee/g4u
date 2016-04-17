@@ -1,0 +1,70 @@
+.nrg
+  &-news
+    // &--many-size
+    //   align-items: flex-start
+    &--any-size
+      @media (min-width: $grid-desktop-breakpoint)
+        > .mdl-cell--4-col
+          padding-right: 0
+
+        > .mdl-cell--8-col + .mdl-cell--4-col
+          padding-left: 0
+          padding-right: 8px
+
+        // > .mdl-cell--8-col + .mdl-cell--4-col
+        //   padding-right: 0
+
+
+        > .mdl-cell--8-col:first-child
+          padding-right: 0
+
+        > .mdl-cell--4-col + .mdl-cell--8-col
+          padding-left: 0
+
+
+
+    &__item
+      border: 1px solid #bababa
+
+      &:hover
+        border-color: #949494
+
+      img 
+        width: 100%  
+
+      &--no-image
+        align-self: stretch
+        display: flex
+        align-items: center
+
+    &__text
+      display: flex 
+
+      &-caption
+        margin: auto
+        text-align: center
+
+        h3 
+          font-size: 1rem  
+
+        small
+          font-size: .5rem  
+          font-family: proxima
+          text-transform: uppercase
+
+    @media (min-width: $grid-desktop-breakpoint)
+      &__item
+        img
+          background-color: #c2bbc3
+
+
+      &__text
+        &-caption
+
+          h3
+            margin: 0 0 20px 0
+            font-size: 1.3125rem
+
+          small
+            font-size: 0.6875rem
+            letter-spacing: .1rem

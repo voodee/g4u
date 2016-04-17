@@ -1,0 +1,115 @@
+.tabs
+  display: none
+  position: relative
+  // width: 100%
+  margin: 0 $grid-desktop-gutter
+
+  &__prev,
+  &__next
+    display: flex
+
+    &-link
+      display: block
+      background-image: url('../images/icons/icons.png')
+      background-repeat: no-repeat
+      background-size: 285px 325px
+      width: 8px
+      height: 13px
+      cursor: pointer
+      position: relative
+      opacity: .8
+      margin: auto
+
+      &:hover
+        opacity: 1
+
+  &__prev
+    &-link
+      background-position: -80px -43px
+
+  &__next
+    &-link
+      background-position: -120px -43px
+
+  ul
+    display: block
+    margin: 0
+    padding: 0
+    text-align: center
+    height: 35px
+    font-size: 0
+
+    &:before
+      display: block
+      content: " "
+      position: absolute
+      top: 50%
+      left: 0
+      right: 0
+      height: 1px
+      background-color: black
+
+    li 
+      display: inline-block
+      position: relative
+      background-color: white
+      border: 1px solid black
+      cursor: pointer
+      font-size: rem(13pt)
+      line-height: em(35pt, 13pt)
+      height: rem(35px)
+      padding: 0 rem(30px)
+      outline: 0
+
+      &.start
+        padding: 0 rem(15px)
+        width: auto
+
+      .num
+        &:before,
+        &:after
+          display: inline-block
+          font-family: inherit
+          vertical-align: baseline
+          position: relative
+          top: -1px
+
+        &:before
+          content: "("
+
+        &:after
+          content: ")"
+
+      &+li
+        border-left: 0
+
+      &:after
+        display: block
+        content: " "
+        position: absolute
+        bottom: 0px
+        left: 0
+        right: 0
+        height: 0
+        background-color: #844641
+        @include transition(all 0.1s linear)
+
+      &:hover,
+      &.active,
+      &.ui-state-active
+        &:after 
+          height: 3px
+
+      a
+        display: block
+        color: inherit
+        margin: 0 rem(-30px)
+        padding: 0 rem(30px)
+        white-space: nowrap
+        outline: 0
+
+  @media (min-width: $grid-desktop-breakpoint)
+    display: block      
+
+  // @include media($mobile) 
+  //   display: none

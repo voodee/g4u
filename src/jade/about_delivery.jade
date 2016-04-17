@@ -1,0 +1,596 @@
+extends layouts/application
+
+append config
+  - var PageTitle = 'Доставка'
+  - var PageClass = 'delivery'
+  - var PagePath = '/'
+
+block breadcrumbs
+
+  nav.breadcrumbs.light
+    ul.breadcrumbs_list
+      li
+        a(href='/', title='Главная') Главная
+      li
+        a(href='/about/', title='О магазине') О магазине
+      li
+        a(href='/about/delivery', title='Отзывы') Доставка
+
+
+block nav_tabs
+  include shared/_nav_tabs_static_page
+
+
+block content
+  
+  section.mdl-grid.page-about
+    .mdl-cell.mdl-cell--8-col.mdl-cell--2-offset-desktop.mdl-cell--6-col-tablet.mdl-cell--1-offset-tablet
+
+      article.page__article
+        .nrg-typography-h1 Доставка
+
+        ul.contents-list
+          li
+            a.pseudo(href='#', title='Стоимость доставки') Стоимость доставки
+          li
+            a.pseudo(href='#', title='Сроки доставки')
+              | Сроки доставки
+          li
+            a.pseudo(href='#', title='Доставка в Казахстан')
+              | Доставка в Казахстан
+          li
+            a.pseudo(href='#', title='Доставка в страны СНГ')
+              | Доставка в страны СНГ
+          li
+            a.pseudo(href='#', title='Международная доставка')
+              | Международная доставка
+          li
+            a.pseudo(href='#pickup_points', title='Пункты самовывоза')
+              | Пункты самовывоза
+
+      article.page__article
+        .nrg-typography-h3 Мы быстро доставим ваш заказ по всей России
+        ul.page__list
+          li
+            | По всей России доставку Ваших заказов в интернет-магазине GOLD4U.ru осуществляет компания СПСР-Экспресс
+          li
+            | В большинстве регионов курьеры работают 364 дня в году – по рабочим
+            | и выходным дням
+          li
+            | По Москве и Московской области возможна доставка в день заказа.
+          li
+            | Все заказы застрахованы на полную стоимость товара.
+          li
+            | Вы можете забрать заказ в пункте самовывоза.
+          li
+            | Условия возврата приобретённого товара Вы можете узнать здесь.
+          li
+            | Дорогостоящие заказы доставляются в кратчайшие сроки, только лично в руки покупателю, службой фельдъегерей (армейской военизированной службой специальной связи)
+      
+      article.page__article
+        .nrg-typography-h3 Стоимость доставки
+        ul.page__list
+          li
+            | Мы не обещаем мнимую бесплатную доставку - стоимость доставки в Ваш населённый пункт и стоимость страховки уже включены в стоимость изделия. Дополнительной оплаты стоимости доставки не требуется!
+          li
+            | Ваш населённый пункт определён автоматически по Вашему IP адресу и указан в верхней части нашего сайта.
+          li
+            | В случае, если Ваш регион доставки определён некорректно, пожалуйста, выберите из списка Ваш населённый пункт  или ближайший пункт самовывоза для корректного расчёта стоимости товара с учётом доставки.
+          li
+            | Если Вашего населённого пункта нет в списке – свяжитесь с оператором по телефону 8-800-555-99-54 (звонок бесплатный) для уточнения возможности доставки.
+          li
+            | Если Вам необходима доставка в другой регион, стоимость товара будет рассчитана автоматически при оформлении заказа.
+      
+      article.page__article
+        .nrg-typography-h3 Сроки доставки
+        p
+          | Сроки доставки указаны с момента подтверждения приёма в обработку  Вашего заказа оператором call-центра или с момента поступления Вам по SMS или электронной почте номера отправления.
+        ul.page__list
+          li
+            | Мы передаём Ваш заказ с службу доставки не позднее следующего рабочего дня после оформления заказа.
+          li
+            | Ваш заказ поступает в региональный пункт самовывоза и обычно в тот же или на следующий день курьер привозит его Вам по указанному адресу.
+          li
+            | В случае необходимости Вы можете самостоятельно забрать заказ в пункте самовывоза сразу же после поступления товара.
+          li
+            | Вы можете отслеживать процесс доставки в товара по номеру отправления.
+          li
+            | Если Вам необходима срочная доставка – свяжитесь с оператором по телефону 8-800-555-99-54 (звонок бесплатный).
+      
+      article.page__article
+        .nrg-typography-h3 Доставка в Казахстан
+        p
+          | Мы можем доставить Ваш заказ в один из пунктов самовывоза в городах: Астана, Актобе. Адреса пунктов самовывоза указаны 
+          a.link(href='/about/') здесь
+          | .
+        p
+          | Внимание! Доставка осуществляется только после полной оплаты товара.
+      
+      article.page__article
+        .nrg-typography-h3 Доставка в страны СНГ
+        p
+          | Доставка в страны Таможенного союза, страны СНГ и Балтии осуществляется с прохождением всех необходимых таможенных формальностей.
+        p
+          | Стоимость и сроки доставки Вы можете  уточнить у операторов call-центра по телефону +7 (495) 790-72-25 или по электронной почте 
+          a.link(href='mailto:sale@gold4u.ru') sale@gold4u.ru
+          | .
+      
+      article.page__article
+        .nrg-typography-h3 Международная доставка
+        p
+          | Если Вам необходима доставка в любую точку мира, обслуживаемую компанией FedEx, Вы можете связать с нами по телефонам +7(495)790-72-25 (GMT+4)
+          | или +852 817 00 272 (GMT+7) для уточнения сроков и стоимости доставки.
+        p
+          | Обращаем Ваше внимание на то, что стоимость товара указанная на сайте не включает налоги и таможенную пошлину страны доставки.
+        p
+          | Если у Вас  есть вопросы по доставке, пожалуйста, свяжитесь с оператором call-центра по телефонам:
+        p
+          | 8-800-555-99-54 (звонок бесплатный) 
+          br
+          |         +7 (495) 790-72-25 
+          br
+          |         +7 (812) 309-39-61 
+          br
+          |         или по электронной почте 
+          a.link(href='mailto:sale@gold4u.ru') sale@gold4u.ru
+          | .
+      
+      article.page__article#pickup_points
+        .nrg-typography-h3 Пункты самовывоза
+        p
+          | В пунктах самовывоза Вы можете самостоятельно забрать и оплатить заказ,
+          | а так же оформить возврат товара, если товар Вам не подошел.
+        
+
+        .mdl-grid.alphabet-places-list
+          ul.mdl-cell--4-col
+            li
+              big.alphabet-places-list__letter А
+              ul
+                li
+                  a(href='')
+                    | Абакан
+                li
+                  a(href='')
+                    | Актобе (Казахстан)
+                li
+                  a(href='')
+                    | Анадырь
+                li
+                  a(href='')
+                    | Апатиты
+                li
+                  a(href='')
+                    | Армавир
+                li
+                  a(href='')
+                    | Архангельск
+                li
+                  a(href='')
+                    | Астана (Казахстан)
+                li
+                  a(href='')
+
+            li
+              big.alphabet-places-list__letter Б
+              ul
+                li
+                  a(href='')
+                    | Барнаул
+                li
+                  a(href='')
+                    | Белгород
+                li
+                  a(href='')
+                    | Биробиджан
+                li
+                  a(href='')
+                    | Благовещенск
+                li
+                  a(href='')
+                    | Братск
+                li
+                  a(href='')
+                    | Брянск
+                li
+                  a(href='')
+                    | Бугульма
+
+
+            li
+              big.alphabet-places-list__letter В
+              ul
+                li
+                  a(href='')
+                    | Великий Новгород
+                li
+                  a(href='')
+                    | Владивосток
+                li
+                  a(href='')
+                    | Владикавказ
+                li
+                  a(href='')
+                    | Владимир
+                li
+                  a(href='')
+                    | Волгоград
+                li
+                  a(href='')
+                    | Волгодонск
+                li
+                  a(href='')
+                    | Вологда
+                li
+                  a(href='')
+                    | Воронеж
+
+
+            li
+              big.alphabet-places-list__letter Г
+              ul
+                li
+                  a(href='') Грозный
+
+
+            li
+              big.alphabet-places-list__letter Е
+              ul
+                li
+                  a(href='') Екатеринбург
+
+
+            li
+              big.alphabet-places-list__letter И
+              ul
+                li
+                  a(href='')
+                    | Иваново
+                li
+                  a(href='')
+                    | Ижевск
+                li
+                  a(href='')
+                    | Иркутск
+
+
+            li
+              big.alphabet-places-list__letter Й
+              ul
+                li
+                  a(href='') Йошкар-Ола
+
+
+            li
+              big.alphabet-places-list__letter К
+              ul
+                li
+                  a(href='')
+                    | Казань
+                li
+                  a(href='')
+                    | Калининград
+                li
+                  a(href='')
+                    | Калуга
+                li
+                  a(href='')
+                    | Каменск-Уральский
+                li
+                  a(href='')
+                    | Кемерово
+                li
+                  a(href='')
+                    | Киров
+                li
+                  a(href='')
+                    | Комсомольск-на-Амуре
+                li
+                  a(href='')
+                    | Кострома
+                li
+                  a(href='')
+                    | Краснодар
+                li
+                  a(href='')
+                    | Красноярск
+                li
+                  a(href='')
+                    | Курган
+                li
+                  a(href='')
+                    | Курск
+
+
+          ul.mdl-cell--4-col
+            li
+              big.alphabet-places-list__letter Л
+              ul
+                li
+                  a(href='')
+                    | Липецк
+
+
+            li
+              big.alphabet-places-list__letter М
+              ul
+                li
+                  a(href='')
+                    | Магадан
+                li
+                  a(href='')
+                    | Магнитогорск
+                li
+                  a(href='')
+                    | Махачкала
+                li
+                  a(href='')
+                    | Москва
+                li
+                  a(href='')
+                    | Мурманск
+
+
+            li
+              big.alphabet-places-list__letter Н
+              ul
+                li
+                  a(href='')
+                    | Набережные Челны
+                li
+                  a(href='')
+                    | Нальчик
+                li
+                  a(href='')
+                    | Нарьян-Мар
+                li
+                  a(href='')
+                    | Находка
+                li
+                  a(href='')
+                    | Нижневартовск
+                li
+                  a(href='')
+                    | Нижний Новгород
+                li
+                  a(href='')
+                    | Нижний Тагил
+                li
+                  a(href='')
+                    | Новокузнецк
+                li
+                  a(href='')
+                    | Новороссийск
+                li
+                  a(href='')
+                    | Новосибирск
+                li
+                  a(href='')
+                    | Новочеркасск
+                li
+                  a(href='')
+                    | Новый Уренгой
+                li
+                  a(href='')
+                    | Норильск
+                li
+                  a(href='')
+                    | Ноябрьск
+
+
+            li
+              big.alphabet-places-list__letter О
+              ul
+                li
+                  a(href='')
+                    | Обнинск
+                li
+                  a(href='')
+                    | Омск
+                li
+                  a(href='')
+                    | Орел
+                li
+                  a(href='')
+                    | Оренбург
+                li
+                  a(href='')
+                    | Орск
+
+
+            li
+              big.alphabet-places-list__letter П
+              ul
+                li
+                  a(href='')
+                    | Пенза
+                li
+                  a(href='')
+                    | Пермь
+                li
+                  a(href='')
+                    | Петрозаводск
+                li
+                  a(href='')
+                    | Петропавловск-Камчатский
+                li
+                  a(href='')
+                    | Псков
+                li
+                  a(href='')
+                    | Пятигорск
+
+
+            li
+              big.alphabet-places-list__letter Р
+              ul
+                li
+                  a(href='')
+                    | Ростов-на-Дону
+                li
+                  a(href='')
+                    | Рязань
+
+
+          ul.mdl-cell--4-col
+            li
+              big.alphabet-places-list__letter С
+              ul
+                li
+                  a(href='')
+                    | Салехард
+                li
+                  a(href='')
+                    | Самара
+                li
+                  a(href='')
+                    | Санкт-Петербург
+                li
+                  a(href='')
+                    | Саранск
+                li
+                  a(href='')
+                    | Саратов
+                li
+                  a(href='')
+                    | Серов
+                li
+                  a(href='')
+                    | Симферополь
+                li
+                  a(href='')
+                    | Смоленск
+                li
+                  a(href='')
+                    | Сочи
+                li
+                  a(href='')
+                    | Ставрополь
+                li
+                  a(href='')
+                    | Старый Оскол
+                li
+                  a(href='')
+                    | Стерлитамак
+                li
+                  a(href='')
+                    | Сургут
+                li
+                  a(href='')
+                    | Сыктывкар
+
+
+            li
+              big.alphabet-places-list__letter Т
+              ul
+                li
+                  a(href='')
+                    | Таганрог
+                li
+                  a(href='')
+                    | Тамбов
+                li
+                  a(href='')
+                    | Тверь
+                li
+                  a(href='')
+                    | Тольятти
+                li
+                  a(href='')
+                    | Томск
+                li
+                  a(href='')
+                    | Тула
+                li
+                  a(href='')
+                    | Тюмень
+
+
+            li
+              big.alphabet-places-list__letter У
+              ul
+                li
+                  a(href='')
+                    | Улан-Удэ
+                li
+                  a(href='')
+                    | Ульяновск
+                li
+                  a(href='')
+                    | Усинск
+                li
+                  a(href='')
+                    | Уссурийск
+                li
+                  a(href='')
+                    | Уфа
+                li
+                  a(href='')
+                    | Ухта
+
+
+            li
+              big.alphabet-places-list__letter Х
+              ul
+                li
+                  a(href='')
+                    | Хабаровск
+                li
+                  a(href='')
+                    | Ханты-Мансийск
+
+
+            li
+              big.alphabet-places-list__letter Ч
+              ul
+                li
+                  a(href='')
+                    | Чебоксары
+                li
+                  a(href='')
+                    | Челябинск
+                li
+                  a(href='')
+                    | Череповец
+                li
+                  a(href='')
+                    | Черкесск
+                li
+                  a(href='')
+                    | Чита
+
+
+            li
+              big.alphabet-places-list__letter Ю
+              ul
+                li
+                  a(href='')
+                    | Южно-Сахалинск
+
+
+            li
+              big.alphabet-places-list__letter Я
+              ul
+                li
+                  a(href='')
+                    | Якутск
+                li
+                  a(href='')
+                    | Ярославль
+      
+
+    .mdl-cell.mdl-cell--12-col
+      .map
+        script(type='text/javascript', charset='utf-8', src='https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=QhzOH95AcPwlWddyrlUdp2_fQ1u8lCqF&width=auto&height=350')
+
+
+    .mdl-cell.mdl-cell--8-col.mdl-cell--2-offset-desktop.mdl-cell--6-col-tablet.mdl-cell--1-offset-tablet
+
+      article.page__article
+        .h3 Вопросы по доставке? Звоните:
+        p
+          | 8-800-555-99-54 (звонок бесплатный) 
+          br
+          | +7 (495) 790-72-25 (Москва)
+          br
+          | +7 (812) 309-39-61 (Санкт-Петербург)

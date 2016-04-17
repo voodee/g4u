@@ -1,0 +1,154 @@
+.section
+  &-page
+    width: 100%
+    margin-top: 1rem
+
+    &__item
+      position: relative
+
+
+
+
+.thumbnails_list
+  display: block
+  margin: 0
+  padding: 0
+
+  li
+    display: block
+    margin: 0
+    padding: 0
+    width: 90%
+    // height: 90px
+    max-width: 110px !important
+
+    &+li
+      margin-top: rem(10px)
+
+
+.share
+
+  &:hover
+    color: #000000
+    border-color: black
+
+    &:after
+      display: none
+
+    > li
+      display: block !important
+
+
+
+.item
+  .share
+    position: absolute
+    right: 0
+    top: 0
+    width: 35px
+    margin: 0
+
+    &:after
+      display: block
+      content: "+"
+      width: 35px
+      height: 35px
+      text-align: center
+      line-height: 40px
+      border: 1px solid #999999
+      color: #999999
+      font-size: 35px
+      cursor: pointer
+      position: absolute
+      left: 0
+      right: 0
+      bottom: -35px
+      
+    li:nth-child(4) 
+      ~ li 
+        display: none
+
+
+
+
+
+
+
+.tip
+  display: inline-block
+  vertical-align: bottom
+  color: #000
+  text-align: center
+  width: 16px
+  height: 16px
+  background-image: url("../images/icons/icons.png")
+  background-position: -260px -36px
+  background-size: 285px 325px
+  background-repeat: no-repeat
+  cursor: pointer
+  font-weight: normal
+  font-style: normal
+  position: relative
+  padding-top: 20px
+  padding-left: 20px
+  padding-right: 20px
+
+  &.i
+    background-position: -260px 0px
+
+  &:hover
+    .tip_info
+      display: block
+
+  .tip_info
+    display: none
+    width: 320px
+    border: 1px solid #000
+    background-color: #fff
+    padding: 10px
+    @include clearfix
+    text-align: left
+    position: absolute
+    top: 32px;
+    left: -151px
+    z-index: 1
+
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      top: -12px
+      left: 156px
+      width: 0
+      height: 0
+      border-style: solid
+      border-width: 0 11px 12px 11px
+      border-color: transparent transparent #000000 transparent
+      z-index: -1
+
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      top: -10px
+      left: 157px
+      width: 0
+      height: 0
+      border-style: solid
+      border-width: 0 10px 10px 10px
+      border-color: transparent transparent #ffffff transparent
+      z-index: 1
+
+    img
+      display: block
+      width: 60px
+      margin-right: 15px
+      float: left
+
+    p
+      display: block
+      color: #323232
+      font-family: "Proxima Nova"
+      font-size: 11px
+      line-height: 14px
+      font-weight: 300

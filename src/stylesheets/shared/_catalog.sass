@@ -1,0 +1,132 @@
+.nrg
+  &-catalog
+    &__items
+      margin-top: $grid-phone-gutter * 2
+
+      @media (min-width: $grid-tablet-breakpoint)
+        margin: $grid-tablet-gutter * 2
+
+      @media (min-width: $grid-desktop-breakpoint)
+        margin: $grid-desktop-gutter * 2
+
+    &__grid
+      padding: 0 
+      margin: -$grid-phone-gutter / 2
+
+      @media (min-width: $grid-tablet-breakpoint)
+        margin: -$grid-tablet-gutter / 2
+
+      @media (min-width: $grid-desktop-breakpoint)
+        margin: -$grid-desktop-gutter / 2
+
+  &-item
+    position: relative
+    box-sizing: border-box
+    transition: all 0.2s cubic-bezier(0.86, 0, 0.07, 1)
+    background-color: white
+    top: 0
+    right: 0
+    left: 0
+    // margin-bottom: $grid-desktop-gutter
+
+    img
+      max-width: 100%
+      display: block
+
+    &__price
+      display: block
+      position: absolute
+      bottom: 10px
+      left: 10px
+      right: 10px
+      font-size: 0.6875em
+      line-height: 1
+      text-align: center; 
+
+    &-info
+      text-align: center
+      display: none
+      transition: all 0.1s linear
+
+      h3 
+        margin: 1.25em 0 0.625em
+
+      &__help-text
+        font-size: 0.6875rem
+
+      &__price
+        display: block
+        line-height: 1
+        text-align: center
+        position: relative
+        top: auto
+        right: auto
+        bottom: auto
+        left: auto
+        margin: 15px auto 30px
+        font-size: 1.3125rem
+        font-weight: normal
+
+      &__actions
+        display: table
+        width: 100%
+        table-layout: fixed 
+
+        .button-s
+          display: table-cell
+          width: 50%
+          padding: 1.30254%
+          padding-top: 8px
+          padding-bottom: 7px
+
+          &:last-child
+            margin-right: 0
+
+          .icon
+            position: absolute
+            top: 50%
+            margin-top: -9px
+
+
+    &__outner
+      position: relative
+      // padding-bottom: 190px
+
+      &:hover
+        z-index: 2    
+
+        .nrg
+          &-item
+            position: absolute
+            border: 1px solid #bababa
+            box-shadow: -2px 2px 4px 0 rgba(195, 195, 195, 0.46)
+            padding: 13px 13px 5px
+            top: -10px
+            right: -13px
+            left: -13px
+            background-color: white
+            z-index: 1
+
+            &-info
+              display: block
+              margin: 0 -4px
+
+
+
+  &-item-block
+    position: absolute
+    background-position: 50%
+    background-size: contain
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+
+    &__outner
+      position: relative
+
+      &:before
+        content: ''
+        display: block
+        // padding-top: calc(100% + 8px)
+        padding-top: 100%

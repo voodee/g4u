@@ -1,0 +1,70 @@
+extends layouts/application
+
+append config
+  - var PageTitle = 'Личный кабинет'
+  - var PageClass = 'history'
+  - var PagePath = '/history.html'
+
+
+block breadcrumbs
+
+  nav.breadcrumbs.breadcrumbs--light
+    ul.breadcrumbs_list.breadcrumbs_list--light
+      li
+        a(href='/', title='Главная') Главная
+      li
+        a(href='/history.html', title='Поиск') История заказов
+
+block nav_tabs
+  include shared/_nav_tabs_cabinet_page
+
+  
+block content
+  section.section.p-orders_history
+    .container
+      .h1 История заказов
+      .orders_history__table
+        .th
+          span.order__number
+            | Номер заказа
+          span.order__date
+            | Дата заказа
+          span.order__sum
+            | Сумма
+          span.order__satatus
+            | Статус
+          span.order__remove
+            | Удалить
+        .tr.order__info
+          span.order__number
+            | 12.12.2014_152
+          span.order__date
+            | 12.12.2014
+          span.order__sum
+            | 9680 руб.
+          span.order__satatus
+            | В обработке
+          span.order__remove
+            | ×
+        .tr.order__info
+          span.order__number
+            | 12.12.2014_153
+          span.order__date
+            | 12.12.2014
+          span.order__sum
+            | 9680 руб.
+          span.order__satatus
+            | Завершён
+          span.order__remove
+            | ×
+        .tr.order__info
+          span.order__number
+            | 12.12.2014_151
+          span.order__date
+            | 12.12.2014
+          span.order__sum
+            | 9680 руб.
+          span.order__satatus
+            | Завершён
+          span.order__remove
+            | ×

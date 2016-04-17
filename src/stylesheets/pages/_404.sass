@@ -1,0 +1,45 @@
+.page
+  &-404 
+    background-color: #985051
+    color: #fff
+    padding: 110px 0 75px
+    background-image: url('../images/error-ring.png')
+    background-repeat: no-repeat
+    background-position: 110% 100%
+    background-size: 612px 570px
+    
+    @media (max-width: $grid-desktop-breakpoint - 1)
+      background-image: none
+
+
+    .search-block
+      margin: 4rem auto 7rem
+
+      &__button
+        background-color: #7a4243
+        position: relative
+        left: -3px
+        z-index: 0
+
+      &__input
+        position: relative
+        z-index: 1
+        border-right: 0
+        margin-right: -1px
+
+        &:focus
+          box-shadow: -12.1px 7px 16px rgba(0, 0, 0, .31)
+
+          + button
+            box-shadow: -12.1px 7px 16px rgba(0, 0, 0, .31)
+
+
+      &__button,
+      &__input
+        box-shadow: -12.1px 7px 16px rgba(0, 0, 0, .11)
+
+        @media (max-width: $grid-tablet-breakpoint - 1)
+          width: 100% !important
+          margin: 0
+          left: 0
+          right: 0

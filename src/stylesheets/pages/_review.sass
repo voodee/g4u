@@ -1,0 +1,153 @@
+.form-review
+  margin: 40px 0 0
+
+.form-review label
+  display: block
+  position: relative
+  width: 100%
+  margin-bottom: 20px
+
+
+.form-review--fields-title
+  display: block
+  position: relative
+  font-size: 13px
+  color: #7B7B7B
+  font-family: prozima, "Proxima Nova", sans-serif
+  font-weight: 300
+  clear: both
+
+
+.form-review--fields-title.ampersant:before
+  content: '*'
+  position: absolute
+  right: -1rem
+  top: 0
+  color: #985051
+  font-size: 2rem
+
+.form-review--fields-input
+  display: block
+
+.form-review--fields-input input,
+.form-review--fields-input textarea
+  width: 100%
+
+.form-review label.spam:before, 
+.form-review label.spam:after
+  display: table
+  content: ' '
+
+.form-review label.spam:after
+  clear: both
+
+.form-review label.spam .form-review--fields-input,
+.form-review label.spam .form-review--fields-title
+  width: 52%
+  float: left
+
+.form-review--fields-img
+  float: right
+  width: 48%
+  text-align: center
+
+.form-review--fields-img img
+  height: 35px
+
+.form-review button
+  display: block
+  width: 204px
+  height: 67px
+  line-height: 67px
+  text-align: center
+  padding: 0
+  font-size: 21px
+  letter-spacing: 0.025em
+
+.review-pagination
+  padding: 50px 0 40px
+
+.review-pagination .h2
+  width: 50%
+  float: left
+  margin: 0
+
+.review-pagination .pages_list
+  margin: 0
+
+.review article
+  max-width: 600px
+  margin: 0 auto
+
+.comment
+  padding: 20px
+  border: 1px solid #000
+  margin-bottom: 15px
+
+  @media (min-width: $grid-tablet-breakpoint)
+    padding: 30px 50px 25px
+
+  @media (min-width: $grid-desktop-breakpoint)
+    padding: 60px 100px 50px
+
+
+.comment h3
+  color: #7b7b7b
+  font-family: prozima, "Proxima Nova", sans-serif
+  font-size: 13px
+  margin-top: 0
+
+.comment--body
+  font-size: 18px
+
+
+
+.media
+  margin-top: 35px
+  font-size: 14px
+
+.media,
+.media-body 
+  overflow: hidden
+  zoom: 1
+
+.media-body
+  width: 10000px
+
+.media-object
+  display: block
+  width: 85px
+  height: 85px
+
+.media-object.img-thumbnail
+  max-width: none
+
+.media-right,
+.media > .pull-right
+  padding-left: 10px
+
+.media-left,
+.media > .pull-left
+  padding-right: 27px
+
+.media-left,
+.media-right,
+.media-body
+  display: table-cell
+  vertical-align: top
+
+.media-middle
+  vertical-align: middle
+
+.media-bottom
+  vertical-align: bottom
+
+.media-heading
+  margin-top: 15px
+  margin-bottom: 15px
+  color: #7b7b7b
+  font-weight: normal
+
+.media-list
+  padding-left: 0
+  list-style: none

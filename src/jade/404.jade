@@ -1,0 +1,24 @@
+extends layouts/application
+
+append config
+  - var PageTitle = 'Ошибка'
+  - var PageClass = '404'
+  - var PagePath = '/'
+
+
+block content
+  .mdl-grid
+    .mdl-cell.mdl-cell--12-col.mdl-typography--text-center.page-404 
+
+      .mdl-grid
+        .mdl-cell.mdl-cell--4-col.mdl-cell--4-offset-desktop.mdl-cell--8-col-tablet.nrg-typography-h1.page-404__title Увы, случилась ошибка и здесь ничего нет, но, может, поищем?
+
+      form.search-block(action='')
+        label(for='search')
+          input.search-block__input#search(type='search')
+          button.search-block__button.search__button(type='submit') Искать
+
+      form.page-404__copyright
+        | © 
+        span.year 2005–2016
+        |  GOLD4U.RU

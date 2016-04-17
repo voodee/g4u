@@ -1,0 +1,144 @@
+#sticky
+  z-index: 9999
+  background: rgb(255, 255, 255)
+
+.favline
+  position: absolute
+  top: 0
+  right: -60px
+  width: 55px
+
+  list-style: none
+  margin: 0
+  padding: 0
+
+  line-height: 55px
+  opacity: 0
+
+  transition: visibility 0s linear .7s, opacity .7s ease-in-out
+
+  // position: fixed
+  right: 0
+  top: 61px
+  background: #fff
+
+  display: none
+
+
+  @media (min-width: $grid-desktop-breakpoint)
+    .is-sticky &
+      display: block
+      opacity: 1
+
+  &--link 
+    border: 1px solid #000
+    // border-right-width: 0
+    border-top-width: 0
+    display: block
+    line-height: 55px
+    text-align: center
+
+
+  & li:nth-child(1) &--link
+    // border-top: 1px solid #000
+    border-top-width: 0
+    // border-bottom-width: 1px
+
+
+  &-icon
+    display: inline-block
+    line-height: inherit
+    background-image: url('../images/icons/icons.png')
+    background-repeat: no-repeat
+    background-size: 285px 325px
+    position: relative
+    vertical-align: middle
+    top: -2px
+    transition: opacity 0.15s
+
+    &--star
+      width: 17px
+      height: 17px
+      background-position: -77px 0px
+
+
+    &--heart
+      width: 18px
+      height: 17px
+      background-position: -115px -1px
+
+
+    &--cart
+      width: 20px
+      height: 17px
+      background-position: -151px -1px
+
+  &--link
+    &:hover,
+    &:focus
+      background: #985051
+      border-color: #985051 !important
+      color: #fff
+
+      .favline-icon--star
+        background-position: -77px -177px
+
+      .favline-icon--heart
+        background-position: -115px -178px
+
+      .favline-icon--cart
+        background-position: -151px -177px
+
+
+
+
+.b-tip
+  position: relative
+
+  &--info
+    display: none
+    width: 150px
+    border: 1px solid #000
+    background-color: #fff
+    padding: 10px
+    text-align: center
+    position: absolute
+    top: 54px
+    left: -48px
+    z-index: 1
+    color: #9a9b9d !important
+    line-height: normal !important
+    font-size: 13px
+    text-decoration: underline
+
+  &:hover &--info,
+  &:focus &--info
+    display: block
+
+  &:hover &--info:before,
+  &:focus &--info:before
+    content: ''
+    display: block
+    position: absolute
+    top: -12px
+    left: 66px
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: 0 11px 12px 11px
+    border-color: transparent transparent #000 transparent
+    z-index: -1
+
+  &:hover &--info:after,
+  &:focus &--info:after
+    content: ''
+    display: block
+    position: absolute
+    top: -10px
+    left: 67px
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: 0 10px 10px 10px
+    border-color: transparent transparent #fff transparent
+    z-index: 1

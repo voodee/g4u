@@ -1,0 +1,46 @@
+extends layouts/application
+
+append config
+  - var PageTitle = 'Личный кабинет'
+  - var PageClass = 'payed'
+  - var PagePath = '/payed.html'
+
+
+block breadcrumbs
+
+  nav.breadcrumbs.breadcrumbs--light
+    ul.breadcrumbs_list.breadcrumbs_list--light
+      li
+        a(href='/', title='Главная') Главная
+      li
+        a(href='/personal_info.html', title='Поиск') Личный кабинет
+
+block nav_tabs
+  include shared/_nav_tabs_cabinet_page
+
+  
+block content
+  section.section.p-thanks
+    .container
+      .order_status
+        .content
+          .h2
+            | Спасибо!
+            br
+            |           Ваша оплата по заказу 
+            span.order_id № 15/03/2015_121
+            |  принята.
+          .order_status_message
+            p
+              | Наши операторы свяжутся с вами в ближайшее время.
+              br
+              |             Если Вы сделали заказ после 18:00 или в выходной/праздничный день,
+              |             с Вами свяжутся в течении следующего рабочего дня.
+      nav.after_order_links
+        ul.links_list
+          li
+            a(href='/') На главную
+          li
+            a(href='/blog') В Ювелирную Энциклопедию
+          li
+            a(href='/catalogue') В Каталог

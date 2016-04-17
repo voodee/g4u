@@ -10,19 +10,51 @@ import 'lib/columnizer'
 import 'partials/layout'
 
 
+import tabs from 'shared/tabs'
+import year from 'shared/year'
+import initQuickLook from 'shared/quickLook'
+
+$(document).ready(() => {
+  
+  $( '.nrg-tabs--ui' ).tabs()
+  tabs()
+  // Показываем дату в футере
+  year()
+  // Инициализируем нажатия на кнопки быстрого просмотра
+  initQuickLook()
 
 
-// INPUT YEAR IN FOOTER
-function year() {
-  var year = (new Date).getFullYear(),
-      startYear = "2005";
-  if (year == startYear) {
-    $(".year").text(year);
-  }
-  else {
-    $(".year").text(startYear + "–" + year);
-  };
-};
+
+
+
+  const $gridPackery = $('.grid-packery').imagesLoaded( function() {
+    $gridPackery.isotope({
+      itemSelector: '.mdl-cell',
+      layoutMode: 'packery'
+    })
+  })
+
+
+  $("#sticky").sticky({topSpacing:0})
+
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -235,13 +267,7 @@ $(document).on("click", ".popup__engrave .ok", function(){
 
 
 
-$(document).on("click", ".quick_look", function(){
-  if ($(this).data('look') == '2') {
-   $(".popup__quicklook--type2").fadeIn(100);
-  } else {
-    $(".popup__quicklook--type1").fadeIn(100);
-  }
-}); 
+
 
 
 
@@ -262,35 +288,35 @@ $(document).on("click", ".popup .cancel", function(){
 
 
 $(document).ready(function() {
-  $( "#info" ).tabs();
+  // $( "#info" ).tabs();
 
-  $( ".additional_info" ).tabs();
+  // $( ".additional_info" ).tabs();
 
 
-  $(function() {
-    var $tabs = $('#tabs').tabs();
+  // $(function() {
+  //   var $tabs = $('#tabs').tabs();
     
-    $("#tabs .ui-tabs-panel").each(function(i){
+  //   $("#tabs .ui-tabs-panel").each(function(i){
     
-      var totalSize = $("#tabs .ui-tabs-panel").size() - 1;
+  //     var totalSize = $("#tabs .ui-tabs-panel").size() - 1;
     
-      if (i != totalSize) {
-          let next = i + 1;
-          $(this).append("<a href='#' class='next-tab mover' rel='" + next + "'></a>");
-      }
+  //     if (i != totalSize) {
+  //         let next = i + 1;
+  //         $(this).append("<a href='#' class='next-tab mover' rel='" + next + "'></a>");
+  //     }
       
-      if (i != 0) {
-          let prev = i - 1;
-          $(this).append("<a href='#' class='prev-tab mover' rel='" + prev + "'></a>");
-      }
+  //     if (i != 0) {
+  //         let prev = i - 1;
+  //         $(this).append("<a href='#' class='prev-tab mover' rel='" + prev + "'></a>");
+  //     }
         
-    });
+  //   });
     
-    $('.next-tab, .prev-tab').click(function() { 
-         $tabs.tabs('option', 'active', $(this).attr("rel"));
-         return false;
-     });
-  });
+  //   $('.next-tab, .prev-tab').click(function() { 
+  //        $tabs.tabs('option', 'active', $(this).attr("rel"));
+  //        return false;
+  //    });
+  // });
 
   mainGrid();
 
@@ -300,7 +326,6 @@ $(document).ready(function() {
 
   select();
   
-  year();
 
   Hyphenator.run();
 
